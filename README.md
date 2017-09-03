@@ -1,6 +1,6 @@
 # percentage
 
-See your battery percentage in the Windows 10 system tray!
+See your battery percentage in the Windows 10 system tray
 
 ## Installing
 
