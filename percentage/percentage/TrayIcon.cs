@@ -44,12 +44,12 @@ namespace percentage
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
 
-            Bitmap img = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black));
+            Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black));
 
-            System.IntPtr icH = img.GetHicon();
-            Icon ico = Icon.FromHandle(icH);
+            System.IntPtr intPtr = bitmap.GetHicon();
+            Icon icon = Icon.FromHandle(intPtr);
 
-            notifyIcon.Icon = ico;
+            notifyIcon.Icon = icon;
             notifyIcon.Text = batteryPercentage + "%";
         }
 
@@ -61,37 +61,37 @@ namespace percentage
         private Image DrawText(String text, Font font, Color textColor, Color backColor)
         {
             // create a dummy bitmap to get a graphics object
-            Image img = new Bitmap(1, 1);
-            Graphics drawing = Graphics.FromImage(img);
+            Image image = new Bitmap(1, 1);
+            Graphics graphics = Graphics.FromImage(image);
 
             // measure the string to see how big the image needs to be
-            SizeF textSize = drawing.MeasureString(text, font);
+            SizeF textSize = graphics.MeasureString(text, font);
 
             // free up the dummy image and old graphics object
-            img.Dispose();
-            drawing.Dispose();
+            image.Dispose();
+            graphics.Dispose();
 
             // create a new image of the right size
-            img = new Bitmap((int)textSize.Width, (int)textSize.Height);
+            image = new Bitmap((int) textSize.Width, (int) textSize.Height);
 
-            drawing = Graphics.FromImage(img);
+            graphics = Graphics.FromImage(image);
 
             // paint the background
-            drawing.Clear(backColor);
+            graphics.Clear(backColor);
 
             // create a brush for the text
             Brush textBrush = new SolidBrush(textColor);
 
-            drawing.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
-            drawing.DrawString(text, font, textBrush, 0, 0);
+            graphics.DrawString(text, font, textBrush, 0, 0);
 
-            drawing.Save();
+            graphics.Save();
 
             textBrush.Dispose();
-            drawing.Dispose();
+            graphics.Dispose();
 
-            return img;
+            return image;
         }
     }
 }
