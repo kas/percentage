@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace percentage
 {
     class TrayIcon
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern bool DestroyIcon(IntPtr handle);
+
         private const string iconFont = "Segoe UI";
         private const int iconFontSize = 14;
 
@@ -47,10 +51,18 @@ namespace percentage
             using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
-                Icon icon = Icon.FromHandle(intPtr);
-
-                notifyIcon.Icon = icon;
-                notifyIcon.Text = batteryPercentage + "%";
+                try
+                {
+                    using (Icon icon = Icon.FromHandle(intPtr))
+                    {
+                        notifyIcon.Icon = icon;
+                        notifyIcon.Text = batteryPercentage + "%";
+                    }
+                }
+                finally
+                {
+                    DestroyIcon(intPtr);
+                }
             }
         }
 
