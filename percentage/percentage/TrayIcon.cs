@@ -55,6 +55,8 @@ namespace percentage
 
         private void menuItem_Click(object sender, EventArgs e)
         {
+            notifyIcon.Visible = false;
+            notifyIcon.Dispose();
             Application.Exit();
         }
 
