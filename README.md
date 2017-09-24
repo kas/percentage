@@ -17,4 +17,3 @@ This project was compiled with Visual Studio Professional 2015.
 ## Contributing
 
 I created this project with a very basic understanding of developing C# desktop applications and contributions are extremely welcome!
-
