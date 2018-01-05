@@ -18,20 +18,13 @@ namespace percentage
 
         public TrayIcon()
         {
-            ContextMenu contextMenu = new ContextMenu();
-            MenuItem menuItem = new MenuItem();
-
             notifyIcon = new NotifyIcon();
 
             // initialize contextMenu
-            contextMenu.MenuItems.AddRange(new MenuItem[] { menuItem });
-
-            // initialize menuItem
-            menuItem.Index = 0;
-            menuItem.Text = "E&xit";
-            menuItem.Click += new System.EventHandler(menuItem_Click);
-
-            notifyIcon.ContextMenu = contextMenu;
+            notifyIcon.ContextMenu = new ContextMenu(new[]
+            {
+                new MenuItem("E&xit", menuItem_Click)
+            });
 
             batteryPercentage = "?";
 
