@@ -39,7 +39,7 @@ namespace percentage
 
             Timer timer = new Timer();
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = 1000; // in miliseconds
+            timer.Interval = 5000; // in miliseconds
             timer.Start();
         }
 
