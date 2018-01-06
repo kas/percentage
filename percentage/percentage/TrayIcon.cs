@@ -32,13 +32,14 @@ namespace percentage
             notifyIcon.Visible = true;
 
             Timer timer = new Timer();
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = settings.updateInterval; // in miliseconds
+            timer.Tick += new EventHandler(UpdateIcon);
+            timer.Interval = settings.updateInterval;
             timer.Start();
-            timer_Tick(timer, null);
+            // show icon immediatly after start because timer interval can be large
+            UpdateIcon(timer, null);
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void UpdateIcon(object sender, EventArgs e)
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
 
@@ -126,8 +127,10 @@ namespace percentage
         private void menuSettings_Click(object sender, EventArgs e)
         {
             new SettingsForm().ShowDialog();
+            // flush cached settings
             settings.Reload();
-            timer_Tick(sender, e);
+            // immediatly update icon to apply changes
+            UpdateIcon(sender, e);
         }
     }
 }
