@@ -10,15 +10,11 @@ namespace percentage
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern bool DestroyIcon(IntPtr handle);
 
-        private string batteryPercentage;
         private NotifyIcon notifyIcon;
-
-        private Settings settings;
+        private Timer updateTimer;
 
         public TrayIcon()
         {
-            settings = new Settings();
-
             notifyIcon = new NotifyIcon();
 
             // initialize contextMenu
@@ -31,61 +27,46 @@ namespace percentage
 
             notifyIcon.Visible = true;
 
-            Timer timer = new Timer();
-            timer.Tick += new EventHandler(UpdateIcon);
-            timer.Interval = settings.updateInterval;
-            timer.Start();
-            // show icon immediatly after start because timer interval can be large
-            UpdateIcon(timer, null);
+            updateTimer = new Timer();
+            updateTimer.Tick += new EventHandler(UpdateIcon);
+            SetUpdateInterval(1000);
         }
 
-        private void UpdateIcon(object sender, EventArgs e)
+        public void SetUpdateInterval(int interval)
         {
-            PowerStatus powerStatus = SystemInformation.PowerStatus;
+            updateTimer.Stop();
+            updateTimer.Interval = interval;
+            updateTimer.Start();
+        }
 
-            batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
-
-            string iconFont = settings.fontName;
-            int iconFontSize = settings.fontSize;
-            Color foregroundColor = settings.foregroundColor;
-            Color backgroundColor = settings.backgroundColor;
-            Color borderColor = settings.borderColor;
-
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize, FontStyle.Bold), foregroundColor, backgroundColor, borderColor)))
+        public void ChangeIcon(Bitmap bitmap, string tooltip)
+        {
+            System.IntPtr intPtr = bitmap.GetHicon();
+            try
             {
-                System.IntPtr intPtr = bitmap.GetHicon();
-                try
+                using (Icon icon = Icon.FromHandle(intPtr))
                 {
-                    using (Icon icon = Icon.FromHandle(intPtr))
-                    {
-                        notifyIcon.Icon = icon;
-                        if (powerStatus.BatteryLifeRemaining != -1)
-                        {
-                            if (powerStatus.BatteryLifeRemaining > 3600)
-                            {
-                                int hours = powerStatus.BatteryLifeRemaining / 3600;
-                                int minutes = powerStatus.BatteryLifeRemaining % 3600 / 60;
-                                notifyIcon.Text = String.Format("{0} hr {1} min ({2}%) remaining", hours, minutes, batteryPercentage);
-                            }
-                            else
-                            {
-                                int minutes = powerStatus.BatteryLifeRemaining / 60;
-                                notifyIcon.Text = String.Format("{0} min ({1}%) remaining", minutes, batteryPercentage);
-                            }
-                        }
-                        else
-                        {
-                            notifyIcon.Text = String.Format("{0}%", batteryPercentage);
-                        }
-                        if (powerStatus.BatteryChargeStatus == BatteryChargeStatus.Charging)
-                        {
-                            notifyIcon.Text += " (charging)";
-                        }
-                    }
+                    // tooltip should be changed along with icon (while icon not yet destroyed)
+                    notifyIcon.Icon = icon;
+                    notifyIcon.Text = tooltip;
                 }
-                finally
+            }
+            finally
+            {
+                DestroyIcon(intPtr);
+            }
+        }
+
+        public virtual void UpdateIcon(object sender, EventArgs e)
+        {
+            // placeholder
+            using (Bitmap bitmap = new Bitmap(32,32))
+            {
+                using (Graphics graphics = Graphics.FromImage(bitmap))
                 {
-                    DestroyIcon(intPtr);
+                    graphics.Clear(Color.Red);
+                    graphics.Save();
+                    ChangeIcon(bitmap, "tooltip text");
                 }
             }
         }
@@ -97,45 +78,10 @@ namespace percentage
             Application.Exit();
         }
 
-        private Image DrawText(String text, Font font, Color textColor, Color backColor, Color borderColor)
-        {
-            var textSize = GetImageSize(text, font);
-            Image image = new Bitmap(32, 32);
-            using (Graphics graphics = Graphics.FromImage(image))
-            {
-                // paint the background
-                graphics.Clear(backColor);
-
-                // create a brush for the text
-                using (Brush textBrush = new SolidBrush(textColor))
-                {
-                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-                    graphics.DrawString(text, font, textBrush, (image.Width - textSize.Width) / 2, (image.Height - textSize.Height) / 2);
-
-                    int borderWidth = 1;
-                    graphics.DrawRectangle(new Pen(borderColor, borderWidth), 0, 0, (int)image.Width - borderWidth, (int)image.Height - borderWidth);
-
-                    graphics.Save();
-                }
-            }
-
-            return image;
-        }
-
-        private static SizeF GetImageSize(string text, Font font)
-        {
-            using (Image image = new Bitmap(1, 1))
-            using (Graphics graphics = Graphics.FromImage(image))
-                return graphics.MeasureString(text, font);
-        }
-
-        private void menuSettings_Click(object sender, EventArgs e)
+        protected virtual void menuSettings_Click(object sender, EventArgs e)
         {
             new SettingsForm().ShowDialog();
-            // flush cached settings
-            settings.Reload();
-            // immediatly update icon to apply changes
-            UpdateIcon(sender, e);
+            UpdateIcon(null, null);
         }
     }
 }

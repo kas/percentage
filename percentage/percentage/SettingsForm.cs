@@ -17,7 +17,7 @@ namespace percentage
         public SettingsForm()
         {
             InitializeComponent();
-            settings = new Settings();
+            settings = Settings.Instance;
             textForeground.Text = Utils.ColorToString(settings.foregroundColor);
             textBackground.Text = Utils.ColorToString(settings.backgroundColor);
             textBorder.Text = Utils.ColorToString(settings.borderColor);

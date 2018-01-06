@@ -14,6 +14,25 @@ namespace percentage
     {
         private CachedStorage storage;
 
+        private static Settings instance;
+
+        public static Settings Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Settings();
+                }
+                return instance;
+            }
+        }
+
+        private Settings()
+        {
+            storage = new CachedStorage();
+        }
+
         // public settings
 
         public Color foregroundColor {
@@ -50,11 +69,6 @@ namespace percentage
             get { var defaultValue = 5000;
                   return storage.ReadInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
-        }
-
-        public Settings()
-        {
-            storage = new CachedStorage();
         }
 
         public void Reload()
