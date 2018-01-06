@@ -28,6 +28,12 @@ namespace percentage
             set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
         }
 
+        public Color borderColor {
+            get { var defaultValue = "#FFFFFFFF";
+                  return Utils.ColorFromString(storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
         public string fontName {
             get { var defaultValue = "Segoe UI";
                   return storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }

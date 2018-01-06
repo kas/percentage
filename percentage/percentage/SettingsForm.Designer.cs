@@ -47,9 +47,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpdateInterval = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sliderBorder = new System.Windows.Forms.TrackBar();
+            this.buttonEditBorder = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBorder = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.sliderForeground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateInterval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliderBorder)).BeginInit();
             this.SuspendLayout();
             // 
             // textFont
@@ -110,7 +116,7 @@
             // buttonOk
             // 
             this.buttonOk.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(530, 249);
+            this.buttonOk.Location = new System.Drawing.Point(530, 282);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(168, 46);
             this.buttonOk.TabIndex = 6;
@@ -121,7 +127,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(361, 249);
+            this.buttonCancel.Location = new System.Drawing.Point(361, 282);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(154, 46);
             this.buttonCancel.TabIndex = 7;
@@ -212,7 +218,7 @@
             0,
             0,
             0});
-            this.numericUpdateInterval.Location = new System.Drawing.Point(202, 184);
+            this.numericUpdateInterval.Location = new System.Drawing.Point(202, 217);
             this.numericUpdateInterval.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -236,17 +242,72 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 184);
+            this.label6.Location = new System.Drawing.Point(12, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(184, 25);
             this.label6.TabIndex = 17;
             this.label6.Text = "Update interval:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(399, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(163, 25);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Transparency:";
+            // 
+            // sliderBorder
+            // 
+            this.sliderBorder.AutoSize = false;
+            this.sliderBorder.Location = new System.Drawing.Point(558, 176);
+            this.sliderBorder.Maximum = 255;
+            this.sliderBorder.Name = "sliderBorder";
+            this.sliderBorder.Size = new System.Drawing.Size(168, 31);
+            this.sliderBorder.TabIndex = 21;
+            this.sliderBorder.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.sliderBorder.Scroll += new System.EventHandler(this.sliderBorder_Scroll);
+            // 
+            // buttonEditBorder
+            // 
+            this.buttonEditBorder.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditBorder.Location = new System.Drawing.Point(306, 176);
+            this.buttonEditBorder.Name = "buttonEditBorder";
+            this.buttonEditBorder.Size = new System.Drawing.Size(77, 31);
+            this.buttonEditBorder.TabIndex = 20;
+            this.buttonEditBorder.Text = "Color";
+            this.buttonEditBorder.UseVisualStyleBackColor = true;
+            this.buttonEditBorder.Click += new System.EventHandler(this.buttonEditBorder_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 25);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Border:";
+            // 
+            // textBorder
+            // 
+            this.textBorder.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBorder.Location = new System.Drawing.Point(154, 174);
+            this.textBorder.Name = "textBorder";
+            this.textBorder.Size = new System.Drawing.Size(142, 33);
+            this.textBorder.TabIndex = 18;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 337);
+            this.ClientSize = new System.Drawing.Size(736, 350);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.sliderBorder);
+            this.Controls.Add(this.buttonEditBorder);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBorder);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numericUpdateInterval);
             this.Controls.Add(this.label5);
@@ -270,6 +331,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sliderForeground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateInterval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sliderBorder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +358,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpdateInterval;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TrackBar sliderBorder;
+        private System.Windows.Forms.Button buttonEditBorder;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBorder;
     }
 }

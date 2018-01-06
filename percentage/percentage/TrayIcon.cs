@@ -49,8 +49,9 @@ namespace percentage
             int iconFontSize = settings.fontSize;
             Color foregroundColor = settings.foregroundColor;
             Color backgroundColor = settings.backgroundColor;
+            Color borderColor = settings.borderColor;
 
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize, FontStyle.Bold), foregroundColor, backgroundColor)))
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize, FontStyle.Bold), foregroundColor, backgroundColor, borderColor)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
@@ -96,10 +97,10 @@ namespace percentage
             Application.Exit();
         }
 
-        private Image DrawText(String text, Font font, Color textColor, Color backColor)
+        private Image DrawText(String text, Font font, Color textColor, Color backColor, Color borderColor)
         {
             var textSize = GetImageSize(text, font);
-            Image image = new Bitmap((int) textSize.Width, (int) textSize.Height);
+            Image image = new Bitmap(32, 32);
             using (Graphics graphics = Graphics.FromImage(image))
             {
                 // paint the background
@@ -109,7 +110,11 @@ namespace percentage
                 using (Brush textBrush = new SolidBrush(textColor))
                 {
                     graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-                    graphics.DrawString(text, font, textBrush, 0, 0);
+                    graphics.DrawString(text, font, textBrush, (image.Width - textSize.Width) / 2, (image.Height - textSize.Height) / 2);
+
+                    int borderWidth = 1;
+                    graphics.DrawRectangle(new Pen(borderColor, borderWidth), 0, 0, (int)image.Width - borderWidth, (int)image.Height - borderWidth);
+
                     graphics.Save();
                 }
             }
