@@ -57,7 +57,28 @@ namespace percentage
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
                         notifyIcon.Icon = icon;
-                        notifyIcon.Text = batteryPercentage + "%";
+                        if (powerStatus.BatteryLifeRemaining != -1)
+                        {
+                            if (powerStatus.BatteryLifeRemaining > 3600)
+                            {
+                                int hours = powerStatus.BatteryLifeRemaining / 3600;
+                                int minutes = powerStatus.BatteryLifeRemaining % 3600 / 60;
+                                notifyIcon.Text = String.Format("{0} hr {1} min ({2}%) remaining", hours, minutes, batteryPercentage);
+                            }
+                            else
+                            {
+                                int minutes = powerStatus.BatteryLifeRemaining / 60;
+                                notifyIcon.Text = String.Format("{0} min ({1}%) remaining", minutes, batteryPercentage);
+                            }
+                        }
+                        else
+                        {
+                            notifyIcon.Text = String.Format("{0}%", batteryPercentage);
+                        }
+                        if (powerStatus.BatteryChargeStatus == BatteryChargeStatus.Charging)
+                        {
+                            notifyIcon.Text += " (charging)";
+                        }
                     }
                 }
                 finally
