@@ -10,38 +10,46 @@ namespace percentage
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern bool DestroyIcon(IntPtr handle);
 
-        private const string iconFont = "Segoe UI";
-        private const int iconFontSize = 14;
-
         private string batteryPercentage;
         private NotifyIcon notifyIcon;
 
+        private Settings settings;
+
         public TrayIcon()
         {
+            settings = new Settings();
+
             notifyIcon = new NotifyIcon();
 
             // initialize contextMenu
             notifyIcon.ContextMenu = new ContextMenu(new[]
             {
-                new MenuItem("E&xit", menuItem_Click)
+                new MenuItem("&Settings", menuSettings_Click),
+                new MenuItem("E&xit", menuExit_Click),
+                
             });
-
-            batteryPercentage = "?";
 
             notifyIcon.Visible = true;
 
             Timer timer = new Timer();
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = 5000; // in miliseconds
+            timer.Interval = settings.updateInterval; // in miliseconds
             timer.Start();
+            timer_Tick(timer, null);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
+
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
 
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize, FontStyle.Bold), Color.White, Color.Transparent)))
+            string iconFont = settings.fontName;
+            int iconFontSize = settings.fontSize;
+            Color foregroundColor = settings.foregroundColor;
+            Color backgroundColor = settings.backgroundColor;
+
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize, FontStyle.Bold), foregroundColor, backgroundColor)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
@@ -59,7 +67,7 @@ namespace percentage
             }
         }
 
-        private void menuItem_Click(object sender, EventArgs e)
+        private void menuExit_Click(object sender, EventArgs e)
         {
             notifyIcon.Visible = false;
             notifyIcon.Dispose();
@@ -92,6 +100,13 @@ namespace percentage
             using (Image image = new Bitmap(1, 1))
             using (Graphics graphics = Graphics.FromImage(image))
                 return graphics.MeasureString(text, font);
+        }
+
+        private void menuSettings_Click(object sender, EventArgs e)
+        {
+            new SettingsForm().ShowDialog();
+            settings.Reload();
+            timer_Tick(sender, e);
         }
     }
 }
