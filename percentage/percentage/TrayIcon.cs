@@ -25,11 +25,26 @@ namespace percentage
                 
             });
 
+            // delay for ensure load order
+            //System.Threading.Thread.Sleep(100);
+
             notifyIcon.Visible = true;
 
             updateTimer = new Timer();
             updateTimer.Tick += new EventHandler(UpdateIcon);
-            SetUpdateInterval(1000);
+            SetUpdateInterval(5000);
+        }
+
+        public void DisableIcon()
+        {
+            updateTimer.Stop();
+            notifyIcon.Visible = false;
+        }
+
+        public void EnableIcon()
+        {
+            updateTimer.Start();
+            notifyIcon.Visible = true;
         }
 
         public void SetUpdateInterval(int interval)

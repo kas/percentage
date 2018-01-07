@@ -11,11 +11,17 @@ namespace percentage
 {
     class BatteryIcon: TrayIcon
     {
-        private Settings settings;
+        private SettingsBattery settings;
 
         public BatteryIcon()
         {
-            settings = Settings.Instance;
+            settings = SettingsBattery.Instance;
+            if (settings.enabled <= 0)
+            {
+                DisableIcon();
+                return;
+            }
+
             SetUpdateInterval(settings.updateInterval);
             // show icon immediatly after start because timer interval can be large
             UpdateIcon(null, null);

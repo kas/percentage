@@ -10,65 +10,267 @@ using System.Threading.Tasks;
 
 namespace percentage
 {
-    class Settings
+
+    class SettingsBattery : Settings
     {
-        private CachedStorage storage;
-
-        private static Settings instance;
-
-        public static Settings Instance
+        private static SettingsBattery instance;
+        public static SettingsBattery Instance
         {
             get
             {
                 if (instance == null)
-                {
-                    instance = new Settings();
-                }
+                    instance = new SettingsBattery();
                 return instance;
             }
         }
-
-        private Settings()
-        {
-            storage = new CachedStorage();
-        }
-
-        // public settings
+        private static string section = "battery";
 
         public Color foregroundColor {
             get { var defaultValue = "#FFFFFFFF";
-                  return Utils.ColorFromString(storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
-            set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
         }
 
         public Color backgroundColor {
             get { var defaultValue = "#00000000";
-                  return Utils.ColorFromString(storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
-            set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
         }
 
         public Color borderColor {
-            get { var defaultValue = "#FFFFFFFF";
-                  return Utils.ColorFromString(storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
-            set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+            get { var defaultValue = "#99FFFFFF";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
         }
 
         public string fontName {
             get { var defaultValue = "Segoe UI";
-                  return storage.Read(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
-            set { storage.Write(MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+                  return storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
         public int fontSize {
-            get { var defaultValue = 14;
-                  return storage.ReadInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
-            set { storage.WriteInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+            get { var defaultValue = 11;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
         public int updateInterval {
             get { var defaultValue = 5000;
-                  return storage.ReadInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
-            set { storage.WriteInt(MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int enabled {
+            get { var defaultValue = 1;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int startDelay {
+            get { var defaultValue = 0;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+    }
+
+    class SettingsCpu: Settings
+    {
+        private static SettingsCpu instance;
+        public static SettingsCpu Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new SettingsCpu();
+                return instance;
+            }
+        }
+        private static string section = "cpu";
+
+        public Color foregroundColor {
+            get { var defaultValue = "#FFFFFFFF";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color backgroundColor {
+            get { var defaultValue = "#00000000";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color borderColor {
+            get { var defaultValue = "#99FFFFFF";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public int updateInterval {
+            get { var defaultValue = 5000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int pointWidth {
+            get { var defaultValue = 2;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int enabled {
+            get { var defaultValue = 1;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int startDelay {
+            get { var defaultValue = 3000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+    }
+
+    class SettingsRam: Settings
+    {
+        private static SettingsRam instance;
+        public static SettingsRam Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new SettingsRam();
+                return instance;
+            }
+        }
+        private static string section = "ram";
+
+        public Color foregroundColor {
+            get { var defaultValue = "#FF7777FF";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color backgroundColor {
+            get { var defaultValue = "#00000000";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color borderColor {
+            get { var defaultValue = "#99AAAAFF";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public int updateInterval {
+            get { var defaultValue = 5000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int pointWidth {
+            get { var defaultValue = 2;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int enabled {
+            get { var defaultValue = 1;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int startDelay {
+            get { var defaultValue = 10000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+    }
+
+    class SettingsNetwork : Settings
+    {
+        private static SettingsNetwork instance;
+        public static SettingsNetwork Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new SettingsNetwork();
+                return instance;
+            }
+        }
+        private static string section = "network";
+
+        public Color foregroundColor {
+            get { var defaultValue = "#FF00FF00";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color backgroundColor {
+            get { var defaultValue = "#00000000";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public Color borderColor {
+            get { var defaultValue = "#9900FF00";
+                  return Utils.ColorFromString(storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue)); }
+            set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), Utils.ColorToString(value)); }
+        }
+
+        public int updateInterval {
+            get { var defaultValue = 5000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int pointWidth {
+            get { var defaultValue = 2;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int maxBandwith {
+            get { var defaultValue = 10 * 1024 * 1024 / 8;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int enabled {
+            get { var defaultValue = 1;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int startDelay {
+            get { var defaultValue = 1000;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+    }
+
+    class Settings
+    {
+        protected CachedStorage storage;
+        //protected static Settings instance;
+
+        //public static Settings Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new Settings();
+        //        }
+        //        return instance;
+        //    }
+        //}
+
+        protected Settings()
+        {
+            storage = new CachedStorage();
         }
 
         public void Reload()
@@ -90,7 +292,7 @@ namespace percentage
             cache = new Dictionary<string, string>();
         }
 
-        public string Read(string name, string default_value = "")
+        public string Read(string section, string name, string default_value = "")
         {
             if (cache.ContainsKey(name))
             {
@@ -100,7 +302,7 @@ namespace percentage
             else
             {
                 // read with default value
-                string value = storage.ReadString("settings", name);
+                string value = storage.ReadString(section, name);
                 if (value.Length == 0)
                     value = default_value;
                 // and save to cache
@@ -109,9 +311,9 @@ namespace percentage
             }
         }
 
-        public void Write(string name, string value)
+        public void Write(string section, string name, string value)
         {
-            storage.WriteString("settings", name, value);
+            storage.WriteString(section, name, value);
             // also change cached value
             cache[name] = value;
         }
@@ -122,14 +324,14 @@ namespace percentage
             cache.Clear();
         }
 
-        public void WriteInt(string name, int value)
+        public void WriteInt(string section, string name, int value)
         {
-            Write(name, value.ToString());
+            Write(section, name, value.ToString());
         }
 
-        public int ReadInt(string name, int default_value = 0)
+        public int ReadInt(string section, string name, int default_value = 0)
         {
-            string value = Read(name, default_value.ToString());
+            string value = Read(section, name, default_value.ToString());
             return Convert.ToInt32(value);
         }
     }
