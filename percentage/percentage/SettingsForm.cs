@@ -25,6 +25,7 @@ namespace percentage
             // battery
             settingsBattery = SettingsBattery.Instance;
             batteryEnabled.Checked = settingsBattery.enabled > 0;
+            batteryPosition.SelectedIndex = batteryPosition.FindStringExact(settingsBattery.position.ToString());
             batteryFontText.Text = settingsBattery.fontName + ", " + settingsBattery.fontSize;
             batteryFontDialog.Font = new Font(settingsBattery.fontName, settingsBattery.fontSize);
             batteryForegroundText.Text = Utils.ColorToString(settingsBattery.foregroundColor);
@@ -38,6 +39,7 @@ namespace percentage
             // cpu
             settingsCpu = SettingsCpu.Instance;
             cpuEnabled.Checked = settingsCpu.enabled > 0;
+            cpuPosition.SelectedIndex = cpuPosition.FindStringExact(settingsCpu.position.ToString());
             cpuPointWidth.SelectedIndex = cpuPointWidth.FindStringExact(settingsCpu.pointWidth.ToString());
             cpuForegroundText.Text = Utils.ColorToString(settingsCpu.foregroundColor);
             cpuForegroundOpacity.Value = settingsCpu.foregroundColor.A;
@@ -50,6 +52,7 @@ namespace percentage
             // ram
             settingsRam = SettingsRam.Instance;
             ramEnabled.Checked = settingsRam.enabled > 0;
+            ramPosition.SelectedIndex = ramPosition.FindStringExact(settingsRam.position.ToString());
             ramPointWidth.SelectedIndex = ramPointWidth.FindStringExact(settingsRam.pointWidth.ToString());
             ramForegroundText.Text = Utils.ColorToString(settingsRam.foregroundColor);
             ramForegroundOpacity.Value = settingsRam.foregroundColor.A;
@@ -62,6 +65,7 @@ namespace percentage
             // network
             settingsNetwork = SettingsNetwork.Instance;
             networkEnabled.Checked = settingsNetwork.enabled > 0;
+            networkPosition.SelectedIndex = networkPosition.FindStringExact(settingsNetwork.position.ToString());
             networkPointWidth.SelectedIndex = networkPointWidth.FindStringExact(settingsNetwork.pointWidth.ToString());
             networkForegroundText.Text = Utils.ColorToString(settingsNetwork.foregroundColor);
             networkForegroundOpacity.Value = settingsNetwork.foregroundColor.A;
@@ -82,6 +86,8 @@ namespace percentage
         {
             // battery
             settingsBattery.enabled = Convert.ToInt32(batteryEnabled.Checked);
+            if (batteryPosition.SelectedIndex >= 0)
+                settingsBattery.position = Convert.ToInt32(batteryPosition.Items[batteryPosition.SelectedIndex]);
             settingsBattery.fontName = batteryFontDialog.Font.Name;
             settingsBattery.fontSize = Convert.ToInt32(batteryFontDialog.Font.Size);
             settingsBattery.foregroundColor = Utils.ColorFromString(batteryForegroundText.Text);
@@ -91,6 +97,8 @@ namespace percentage
 
             // cpu
             settingsCpu.enabled = Convert.ToInt32(cpuEnabled.Checked);
+            if (cpuPosition.SelectedIndex >= 0)
+                settingsCpu.position = Convert.ToInt32(cpuPosition.Items[cpuPosition.SelectedIndex]);
             if (cpuPointWidth.SelectedIndex >= 0)
                 settingsCpu.pointWidth = Convert.ToInt32(cpuPointWidth.Items[cpuPointWidth.SelectedIndex]);
             settingsCpu.foregroundColor = Utils.ColorFromString(cpuForegroundText.Text);
@@ -100,6 +108,8 @@ namespace percentage
 
             // ram
             settingsRam.enabled = Convert.ToInt32(ramEnabled.Checked);
+            if (ramPosition.SelectedIndex >= 0)
+                settingsRam.position = Convert.ToInt32(ramPosition.Items[ramPosition.SelectedIndex]);
             if (ramPointWidth.SelectedIndex >= 0)
                 settingsRam.pointWidth = Convert.ToInt32(ramPointWidth.Items[ramPointWidth.SelectedIndex]);
             settingsRam.foregroundColor = Utils.ColorFromString(ramForegroundText.Text);
@@ -109,6 +119,8 @@ namespace percentage
 
             // network
             settingsNetwork.enabled = Convert.ToInt32(networkEnabled.Checked);
+            if (networkPosition.SelectedIndex >= 0)
+                settingsNetwork.position = Convert.ToInt32(networkPosition.Items[networkPosition.SelectedIndex]);
             if (networkPointWidth.SelectedIndex >= 0)
                 settingsNetwork.pointWidth = Convert.ToInt32(networkPointWidth.Items[networkPointWidth.SelectedIndex]);
             settingsNetwork.foregroundColor = Utils.ColorFromString(networkForegroundText.Text);

@@ -67,8 +67,8 @@ namespace percentage
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
-        public int startDelay {
-            get { var defaultValue = 0;
+        public int position {
+            get { var defaultValue = 1;
                   return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
@@ -124,8 +124,8 @@ namespace percentage
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
-        public int startDelay {
-            get { var defaultValue = 3000;
+        public int position {
+            get { var defaultValue = 2;
                   return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
@@ -181,8 +181,8 @@ namespace percentage
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
-        public int startDelay {
-            get { var defaultValue = 10000;
+        public int position {
+            get { var defaultValue = 3;
                   return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
@@ -244,8 +244,8 @@ namespace percentage
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
-        public int startDelay {
-            get { var defaultValue = 1000;
+        public int position {
+            get { var defaultValue = 4;
                   return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }

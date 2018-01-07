@@ -29,8 +29,8 @@ namespace percentage
             cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
 
             SetUpdateInterval(settings.updateInterval);
-            // show icon immediatly after start because timer interval can be large
-            UpdateIcon(null, null);
+            // show icon only after delay for preserve wanted icons order
+            DelayedIcon(settings.position);
         }
 
         public float GetCpuUsage()

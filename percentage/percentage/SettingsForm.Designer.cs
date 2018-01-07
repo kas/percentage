@@ -149,6 +149,15 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.batteryPosition = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.cpuPosition = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.ramPosition = new System.Windows.Forms.ComboBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.networkPosition = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.batteryBorderOpacity)).BeginInit();
@@ -241,6 +250,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label39);
+            this.tabPage1.Controls.Add(this.batteryPosition);
             this.tabPage1.Controls.Add(this.panel5);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel3);
@@ -251,7 +262,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(474, 240);
+            this.tabPage1.Size = new System.Drawing.Size(466, 236);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Battery";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -272,9 +283,9 @@
             this.batteryEnabled.Location = new System.Drawing.Point(15, 12);
             this.batteryEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryEnabled.Name = "batteryEnabled";
-            this.batteryEnabled.Size = new System.Drawing.Size(152, 19);
+            this.batteryEnabled.Size = new System.Drawing.Size(66, 19);
             this.batteryEnabled.TabIndex = 43;
-            this.batteryEnabled.Text = "Enable (required restart)";
+            this.batteryEnabled.Text = "Enable*";
             this.batteryEnabled.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -500,6 +511,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label41);
+            this.tabPage2.Controls.Add(this.cpuPosition);
             this.tabPage2.Controls.Add(this.panel10);
             this.tabPage2.Controls.Add(this.panel9);
             this.tabPage2.Controls.Add(this.panel8);
@@ -510,7 +523,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(474, 240);
+            this.tabPage2.Size = new System.Drawing.Size(466, 236);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CPU";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -531,9 +544,9 @@
             this.cpuEnabled.Location = new System.Drawing.Point(15, 12);
             this.cpuEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuEnabled.Name = "cpuEnabled";
-            this.cpuEnabled.Size = new System.Drawing.Size(152, 19);
+            this.cpuEnabled.Size = new System.Drawing.Size(66, 19);
             this.cpuEnabled.TabIndex = 66;
-            this.cpuEnabled.Text = "Enable (required restart)";
+            this.cpuEnabled.Text = "Enable*";
             this.cpuEnabled.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -763,6 +776,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label42);
+            this.tabPage3.Controls.Add(this.ramPosition);
             this.tabPage3.Controls.Add(this.panel15);
             this.tabPage3.Controls.Add(this.panel14);
             this.tabPage3.Controls.Add(this.panel13);
@@ -773,7 +788,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(474, 240);
+            this.tabPage3.Size = new System.Drawing.Size(466, 236);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "RAM";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -794,9 +809,9 @@
             this.ramEnabled.Location = new System.Drawing.Point(15, 12);
             this.ramEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramEnabled.Name = "ramEnabled";
-            this.ramEnabled.Size = new System.Drawing.Size(152, 19);
+            this.ramEnabled.Size = new System.Drawing.Size(66, 19);
             this.ramEnabled.TabIndex = 88;
-            this.ramEnabled.Text = "Enable (required restart)";
+            this.ramEnabled.Text = "Enable*";
             this.ramEnabled.UseVisualStyleBackColor = true;
             // 
             // label18
@@ -1026,6 +1041,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label43);
+            this.tabPage4.Controls.Add(this.networkPosition);
             this.tabPage4.Controls.Add(this.panel21);
             this.tabPage4.Controls.Add(this.panel20);
             this.tabPage4.Controls.Add(this.panel19);
@@ -1058,9 +1075,9 @@
             this.networkEnabled.Location = new System.Drawing.Point(15, 12);
             this.networkEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkEnabled.Name = "networkEnabled";
-            this.networkEnabled.Size = new System.Drawing.Size(152, 19);
+            this.networkEnabled.Size = new System.Drawing.Size(66, 19);
             this.networkEnabled.TabIndex = 88;
-            this.networkEnabled.Text = "Enable (required restart)";
+            this.networkEnabled.Text = "Enable*";
             this.networkEnabled.UseVisualStyleBackColor = true;
             // 
             // label29
@@ -1570,11 +1587,113 @@
             this.panel21.Size = new System.Drawing.Size(450, 32);
             this.panel21.TabIndex = 95;
             // 
+            // batteryPosition
+            // 
+            this.batteryPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.batteryPosition.FormattingEnabled = true;
+            this.batteryPosition.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.batteryPosition.Location = new System.Drawing.Point(404, 10);
+            this.batteryPosition.Name = "batteryPosition";
+            this.batteryPosition.Size = new System.Drawing.Size(47, 23);
+            this.batteryPosition.TabIndex = 50;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(346, 14);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(55, 15);
+            this.label39.TabIndex = 51;
+            this.label39.Text = "Position*";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(346, 14);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(55, 15);
+            this.label41.TabIndex = 74;
+            this.label41.Text = "Position*";
+            // 
+            // cpuPosition
+            // 
+            this.cpuPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cpuPosition.FormattingEnabled = true;
+            this.cpuPosition.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cpuPosition.Location = new System.Drawing.Point(404, 10);
+            this.cpuPosition.Name = "cpuPosition";
+            this.cpuPosition.Size = new System.Drawing.Size(47, 23);
+            this.cpuPosition.TabIndex = 73;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(346, 14);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(55, 15);
+            this.label42.TabIndex = 96;
+            this.label42.Text = "Position*";
+            // 
+            // ramPosition
+            // 
+            this.ramPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ramPosition.FormattingEnabled = true;
+            this.ramPosition.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.ramPosition.Location = new System.Drawing.Point(404, 10);
+            this.ramPosition.Name = "ramPosition";
+            this.ramPosition.Size = new System.Drawing.Size(47, 23);
+            this.ramPosition.TabIndex = 95;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(346, 14);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(55, 15);
+            this.label43.TabIndex = 97;
+            this.label43.Text = "Position*";
+            // 
+            // networkPosition
+            // 
+            this.networkPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.networkPosition.FormattingEnabled = true;
+            this.networkPosition.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.networkPosition.Location = new System.Drawing.Point(404, 10);
+            this.networkPosition.Name = "networkPosition";
+            this.networkPosition.Size = new System.Drawing.Size(47, 23);
+            this.networkPosition.TabIndex = 96;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(13, 276);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(103, 15);
+            this.label46.TabIndex = 24;
+            this.label46.Text = "* - required restart";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(478, 302);
+            this.Controls.Add(this.label46);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -1652,6 +1771,7 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1778,5 +1898,14 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox batteryPosition;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox cpuPosition;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox ramPosition;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ComboBox networkPosition;
+        private System.Windows.Forms.Label label46;
     }
 }

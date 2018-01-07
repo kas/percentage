@@ -27,14 +27,10 @@ namespace percentage
                 
             });
 
-            // delay for ensure load order
-            //System.Threading.Thread.Sleep(100);
-
             notifyIcon.Visible = true;
 
             updateTimer = new Timer();
             updateTimer.Tick += new EventHandler(UpdateIcon);
-            SetUpdateInterval(5000);
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -81,6 +77,35 @@ namespace percentage
             {
                 DestroyIcon(intPtr);
             }
+        }
+
+        protected void DelayedIcon(int position)
+        {
+            // if app contains several icons windows shows it in next order: [1,2,3,4] -> [1,4,3,2]
+            // so caclulate delay from wanted position
+            // need change if increased maximum icons number
+            int minimumDelay = 1000;
+            int delay;
+            if (position <= 1)
+                delay = 1; // without delay (minimum allowed timer interval)
+            else if (position == 2)
+                delay = 3 * minimumDelay;
+            else if (position == 3)
+                delay = 2 * minimumDelay;
+            else if (position == 4)
+                delay = 1 * minimumDelay;
+            else
+                delay = 2 * minimumDelay; // too large number, mess it with last icon
+            Timer timer = new Timer();
+            timer.Interval = delay;
+            timer.Tick += DelayedIconStart;
+            timer.Start();
+        }
+
+        private void DelayedIconStart(object sender, EventArgs e)
+        {
+            ((Timer)sender).Stop();
+            UpdateIcon(sender, e);
         }
 
         public virtual void UpdateIcon(object sender, EventArgs e)

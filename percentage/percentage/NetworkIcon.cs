@@ -35,8 +35,8 @@ namespace percentage
             checkNICTimer.Start();
 
             SetUpdateInterval(settings.updateInterval);
-            // show icon immediatly after start because timer interval can be large
-            UpdateIcon(null, null);
+            // show icon only after delay for preserve wanted icons order
+            DelayedIcon(settings.position);
         }
 
         private void CheckNICList(object sender, EventArgs e)
