@@ -82,11 +82,23 @@ namespace percentage
                 // create a brush for the text
                 using (Brush textBrush = new SolidBrush(textColor))
                 {
-                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-                    graphics.DrawString(text, font, textBrush, (image.Width - textSize.Width) / 2, (image.Height - textSize.Height) / 2);
-
                     int borderWidth = 1;
                     graphics.DrawRectangle(new Pen(borderColor, borderWidth), 0, 0, (int)image.Width - borderWidth, (int)image.Height - borderWidth);
+
+                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+
+                    if (settings.scaling > 0)
+                    {
+                        int allowedCrop = 1;
+                        float xScale = (iconSize + 2 * allowedCrop) / textSize.Width;
+                        float yScale = (iconSize + 2 * allowedCrop) / textSize.Height;
+                        graphics.ScaleTransform(xScale, yScale);
+                        graphics.DrawString(text, font, textBrush, -allowedCrop, (image.Height + 2 * allowedCrop - textSize.Height * yScale) / 2);
+                    }
+                    else
+                    {
+                        graphics.DrawString(text, font, textBrush, (image.Width - textSize.Width) / 2, (image.Height - textSize.Height) / 2);
+                    }
 
                     graphics.Save();
                 }

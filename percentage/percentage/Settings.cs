@@ -44,13 +44,19 @@ namespace percentage
         }
 
         public string fontName {
-            get { var defaultValue = "Segoe UI";
+            get { var defaultValue = "Microsoft Sans Serif";
                   return storage.Read(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.Write(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }
 
         public int fontSize {
-            get { var defaultValue = 11;
+            get { var defaultValue = 14;
+                  return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
+            set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
+        }
+
+        public int scaling {
+            get { var defaultValue = 1;
                   return storage.ReadInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), defaultValue); }
             set { storage.WriteInt(section, MethodBase.GetCurrentMethod().Name.Remove(0, 4), value); }
         }

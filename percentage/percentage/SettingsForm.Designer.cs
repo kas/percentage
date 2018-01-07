@@ -158,6 +158,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.networkPosition = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
+            this.batteryScaling = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.batteryBorderOpacity)).BeginInit();
@@ -423,10 +424,10 @@
             // 
             // batteryFontButton
             // 
-            this.batteryFontButton.Location = new System.Drawing.Point(338, 3);
+            this.batteryFontButton.Location = new System.Drawing.Point(312, 3);
             this.batteryFontButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontButton.Name = "batteryFontButton";
-            this.batteryFontButton.Size = new System.Drawing.Size(107, 25);
+            this.batteryFontButton.Size = new System.Drawing.Size(49, 25);
             this.batteryFontButton.TabIndex = 31;
             this.batteryFontButton.Text = "Font";
             this.batteryFontButton.UseVisualStyleBackColor = true;
@@ -506,7 +507,7 @@
             this.batteryFontText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontText.Name = "batteryFontText";
             this.batteryFontText.ReadOnly = true;
-            this.batteryFontText.Size = new System.Drawing.Size(236, 23);
+            this.batteryFontText.Size = new System.Drawing.Size(210, 23);
             this.batteryFontText.TabIndex = 23;
             // 
             // tabPage2
@@ -1355,6 +1356,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.batteryScaling);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.batteryFontText);
             this.panel1.Controls.Add(this.batteryFontButton);
@@ -1688,6 +1690,16 @@
             this.label46.TabIndex = 24;
             this.label46.Text = "* - required restart";
             // 
+            // batteryScaling
+            // 
+            this.batteryScaling.AutoSize = true;
+            this.batteryScaling.Location = new System.Drawing.Point(377, 7);
+            this.batteryScaling.Name = "batteryScaling";
+            this.batteryScaling.Size = new System.Drawing.Size(64, 19);
+            this.batteryScaling.TabIndex = 32;
+            this.batteryScaling.Text = "Scaling";
+            this.batteryScaling.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1907,5 +1919,6 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.ComboBox networkPosition;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.CheckBox batteryScaling;
     }
 }

@@ -28,6 +28,7 @@ namespace percentage
             batteryPosition.SelectedIndex = batteryPosition.FindStringExact(settingsBattery.position.ToString());
             batteryFontText.Text = settingsBattery.fontName + ", " + settingsBattery.fontSize;
             batteryFontDialog.Font = new Font(settingsBattery.fontName, settingsBattery.fontSize);
+            batteryScaling.Checked = settingsBattery.scaling > 0;
             batteryForegroundText.Text = Utils.ColorToString(settingsBattery.foregroundColor);
             batteryForegroundOpacity.Value = settingsBattery.foregroundColor.A;
             batteryBackgroundText.Text = Utils.ColorToString(settingsBattery.backgroundColor);
@@ -90,6 +91,7 @@ namespace percentage
                 settingsBattery.position = Convert.ToInt32(batteryPosition.Items[batteryPosition.SelectedIndex]);
             settingsBattery.fontName = batteryFontDialog.Font.Name;
             settingsBattery.fontSize = Convert.ToInt32(batteryFontDialog.Font.Size);
+            settingsBattery.scaling = Convert.ToInt32(batteryScaling.Checked);
             settingsBattery.foregroundColor = Utils.ColorFromString(batteryForegroundText.Text);
             settingsBattery.backgroundColor = Utils.ColorFromString(batteryBackgroundText.Text);
             settingsBattery.borderColor = Utils.ColorFromString(batteryBorderText.Text);
