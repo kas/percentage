@@ -44,7 +44,6 @@ namespace percentage
             PerformanceCounterCategory pcg = new PerformanceCounterCategory("Network Adapter");
             if (counters.Count != pcg.GetInstanceNames().Length)
             {
-                Console.WriteLine("Update NIC list started!");
                 UpdateNICList();
             }
         }
@@ -55,7 +54,6 @@ namespace percentage
             PerformanceCounterCategory pcg = new PerformanceCounterCategory("Network Adapter");
             foreach (var networkInterface in pcg.GetInstanceNames())
             {
-                Console.WriteLine(networkInterface);
                 var counter = new PerformanceCounter("Network Adapter", "Bytes Total/sec", networkInterface);
                 counters.Add(counter);
             }
@@ -68,7 +66,6 @@ namespace percentage
             {
                 totalBytes += counter.NextValue();
             }
-            Console.WriteLine("Bytes Sent: {0}", totalBytes);
             return totalBytes;
         }
 
