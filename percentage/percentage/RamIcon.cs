@@ -95,11 +95,5 @@ namespace percentage
                 }
             }
         }
-
-        protected override void menuSettings_Click(object sender, EventArgs e)
-        {
-            base.menuSettings_Click(sender, e);
-            SetUpdateInterval(settings.updateInterval);
-        }
     }
 }

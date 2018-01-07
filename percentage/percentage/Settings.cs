@@ -260,19 +260,6 @@ namespace percentage
     class Settings
     {
         protected CachedStorage storage;
-        //protected static Settings instance;
-
-        //public static Settings Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //        {
-        //            instance = new Settings();
-        //        }
-        //        return instance;
-        //    }
-        //}
 
         protected Settings()
         {

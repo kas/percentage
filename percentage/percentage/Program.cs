@@ -14,10 +14,10 @@ namespace percentage
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            TrayIcon trayIcon = new BatteryIcon();
-            TrayIcon trayIcon4 = new NetworkIcon();
+            TrayIcon trayIcon1 = new BatteryIcon();
+            TrayIcon trayIcon2 = new NetworkIcon();
             TrayIcon trayIcon3 = new RamIcon();
-            TrayIcon trayIcon2 = new CpuIcon();
+            TrayIcon trayIcon4 = new CpuIcon();
 
             Application.Run();
         }

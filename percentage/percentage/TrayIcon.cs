@@ -10,8 +10,6 @@ namespace percentage
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern bool DestroyIcon(IntPtr handle);
 
-
-
         private NotifyIcon notifyIcon;
         private Timer updateTimer;
 
@@ -19,16 +17,16 @@ namespace percentage
         {
             notifyIcon = new NotifyIcon();
 
-            // initialize contextMenu
+            // common menu for all icons
             notifyIcon.ContextMenu = new ContextMenu(new[]
             {
                 new MenuItem("&Settings", menuSettings_Click),
                 new MenuItem("E&xit", menuExit_Click),
-                
             });
 
             notifyIcon.Visible = true;
 
+            // prepare update timer
             updateTimer = new Timer();
             updateTimer.Tick += new EventHandler(UpdateIcon);
         }
@@ -39,6 +37,7 @@ namespace percentage
 
         public int GetSmallIconSize()
         {
+            // get size for tray icons on current system (depends of dpi)
             return GetSystemMetrics(SM_CXSMICON);
         }
 
@@ -56,9 +55,7 @@ namespace percentage
 
         public void SetUpdateInterval(int interval)
         {
-            updateTimer.Stop();
             updateTimer.Interval = interval;
-            //updateTimer.Start();
         }
 
         public void ChangeIcon(Bitmap bitmap, string tooltip)
@@ -105,8 +102,9 @@ namespace percentage
         private void DelayedIconStart(object sender, EventArgs e)
         {
             ((Timer)sender).Stop();
-            updateTimer.Start();
             UpdateIcon(sender, e);
+            // and start updating
+            updateTimer.Start();
         }
 
         public virtual void UpdateIcon(object sender, EventArgs e)
@@ -134,6 +132,7 @@ namespace percentage
         protected virtual void menuSettings_Click(object sender, EventArgs e)
         {
             new SettingsForm().ShowDialog();
+            // immediatly see changes (works only on current icon)
             UpdateIcon(null, null);
         }
     }

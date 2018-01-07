@@ -13,9 +13,7 @@ namespace percentage
     class NetworkIcon: TrayIcon
     {
         private SettingsNetwork settings;
-
         List<float> measurents = new List<float>();
-
         List<PerformanceCounter> counters = new List<PerformanceCounter>();
 
         public NetworkIcon()
@@ -29,6 +27,7 @@ namespace percentage
 
             UpdateNICList();
 
+            // periodical check for new network interfaces
             Timer checkNICTimer = new Timer();
             checkNICTimer.Interval = 60 * 1000;
             checkNICTimer.Tick += CheckNICList;
@@ -108,12 +107,6 @@ namespace percentage
                     ChangeIcon(bitmap, tooltip);
                 }
             }
-        }
-
-        protected override void menuSettings_Click(object sender, EventArgs e)
-        {
-            base.menuSettings_Click(sender, e);
-            SetUpdateInterval(settings.updateInterval);
         }
     }
 }

@@ -13,7 +13,6 @@ namespace percentage
     class CpuIcon: TrayIcon
     {
         private SettingsCpu settings;
-
         PerformanceCounter cpuCounter;
         List<float> measurents = new List<float>();
 
@@ -75,12 +74,6 @@ namespace percentage
                     ChangeIcon(bitmap, tooltip);
                 }
             }
-        }
-
-        protected override void menuSettings_Click(object sender, EventArgs e)
-        {
-            base.menuSettings_Click(sender, e);
-            SetUpdateInterval(settings.updateInterval);
         }
     }
 }

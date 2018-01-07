@@ -112,11 +112,5 @@ namespace percentage
             using (Graphics graphics = Graphics.FromImage(image))
                 return graphics.MeasureString(text, font);
         }
-
-        protected override void menuSettings_Click(object sender, EventArgs e)
-        {
-            base.menuSettings_Click(sender, e);
-            SetUpdateInterval(settings.updateInterval);
-        }
     }
 }
