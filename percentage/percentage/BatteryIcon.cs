@@ -72,7 +72,8 @@ namespace percentage
         private Image DrawText(String text, Font font, Color textColor, Color backColor, Color borderColor)
         {
             var textSize = GetImageSize(text, font);
-            Image image = new Bitmap(32, 32);
+            int iconSize = GetSmallIconSize();
+            Image image = new Bitmap(iconSize, iconSize);
             using (Graphics graphics = Graphics.FromImage(image))
             {
                 // paint the background

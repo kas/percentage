@@ -81,7 +81,8 @@ namespace percentage
             int pointWidth = settings.pointWidth;
             int bandwidthMax = settings.maxBandwith;
 
-            using (Bitmap bitmap = new Bitmap(32, 32))
+            int iconSize = GetSmallIconSize();
+            using (Bitmap bitmap = new Bitmap(iconSize, iconSize))
             {
                 using (Graphics graphics = Graphics.FromImage(bitmap))
                 {

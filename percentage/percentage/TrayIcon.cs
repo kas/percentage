@@ -10,6 +10,8 @@ namespace percentage
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern bool DestroyIcon(IntPtr handle);
 
+
+
         private NotifyIcon notifyIcon;
         private Timer updateTimer;
 
@@ -33,6 +35,15 @@ namespace percentage
             updateTimer = new Timer();
             updateTimer.Tick += new EventHandler(UpdateIcon);
             SetUpdateInterval(5000);
+        }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int GetSystemMetrics(int nIndex);
+        const int SM_CXSMICON = 49;
+
+        public int GetSmallIconSize()
+        {
+            return GetSystemMetrics(SM_CXSMICON);
         }
 
         public void DisableIcon()
@@ -75,7 +86,8 @@ namespace percentage
         public virtual void UpdateIcon(object sender, EventArgs e)
         {
             // placeholder
-            using (Bitmap bitmap = new Bitmap(32,32))
+            int iconSize = GetSmallIconSize();
+            using (Bitmap bitmap = new Bitmap(iconSize, iconSize))
             {
                 using (Graphics graphics = Graphics.FromImage(bitmap))
                 {
