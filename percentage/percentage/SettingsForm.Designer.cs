@@ -164,10 +164,10 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(654, 541);
+            this.buttonOk.Location = new System.Drawing.Point(382, 278);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(164, 46);
+            this.buttonOk.Size = new System.Drawing.Size(104, 29);
             this.buttonOk.TabIndex = 6;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -175,10 +175,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(478, 541);
+            this.buttonCancel.Location = new System.Drawing.Point(274, 278);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(164, 46);
+            this.buttonCancel.Size = new System.Drawing.Size(104, 29);
             this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -190,11 +190,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(8, 8);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(810, 523);
+            this.tabControl1.Size = new System.Drawing.Size(482, 268);
             this.tabControl1.TabIndex = 23;
             // 
             // tabPage1
@@ -221,10 +221,11 @@
             this.tabPage1.Controls.Add(this.batteryForegroundText);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.batteryFontText);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(802, 485);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabPage1.Size = new System.Drawing.Size(474, 240);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Battery";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -232,20 +233,20 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(323, 285);
+            this.label40.Location = new System.Drawing.Point(176, 178);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(43, 25);
+            this.label40.Size = new System.Drawing.Size(23, 15);
             this.label40.TabIndex = 44;
             this.label40.Text = "ms";
             // 
             // batteryEnabled
             // 
             this.batteryEnabled.AutoSize = true;
-            this.batteryEnabled.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryEnabled.Location = new System.Drawing.Point(24, 19);
+            this.batteryEnabled.Location = new System.Drawing.Point(15, 12);
+            this.batteryEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryEnabled.Name = "batteryEnabled";
-            this.batteryEnabled.Size = new System.Drawing.Size(303, 29);
+            this.batteryEnabled.Size = new System.Drawing.Size(152, 19);
             this.batteryEnabled.TabIndex = 43;
             this.batteryEnabled.Text = "Enable (required restart)";
             this.batteryEnabled.UseVisualStyleBackColor = true;
@@ -253,30 +254,31 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(427, 232);
+            this.label9.Location = new System.Drawing.Point(272, 147);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 25);
+            this.label9.Size = new System.Drawing.Size(51, 15);
             this.label9.TabIndex = 42;
             this.label9.Text = "Opacity:";
             // 
             // batteryBorderOpacity
             // 
             this.batteryBorderOpacity.AutoSize = false;
-            this.batteryBorderOpacity.Location = new System.Drawing.Point(536, 229);
+            this.batteryBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.batteryBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderOpacity.Maximum = 255;
             this.batteryBorderOpacity.Name = "batteryBorderOpacity";
-            this.batteryBorderOpacity.Size = new System.Drawing.Size(207, 31);
+            this.batteryBorderOpacity.Size = new System.Drawing.Size(132, 18);
             this.batteryBorderOpacity.TabIndex = 41;
             this.batteryBorderOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.batteryBorderOpacity.Scroll += new System.EventHandler(this.batteryBorderOpacity_Scroll);
             // 
             // batteryBorderButton
             // 
-            this.batteryBorderButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryBorderButton.Location = new System.Drawing.Point(333, 229);
+            this.batteryBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.batteryBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderButton.Name = "batteryBorderButton";
-            this.batteryBorderButton.Size = new System.Drawing.Size(77, 31);
+            this.batteryBorderButton.Size = new System.Drawing.Size(49, 25);
             this.batteryBorderButton.TabIndex = 40;
             this.batteryBorderButton.Text = "Color";
             this.batteryBorderButton.UseVisualStyleBackColor = true;
@@ -285,40 +287,40 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 232);
+            this.label10.Location = new System.Drawing.Point(19, 147);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 25);
+            this.label10.Size = new System.Drawing.Size(42, 15);
             this.label10.TabIndex = 39;
-            this.label10.Text = "Border:";
+            this.label10.Text = "Border";
             // 
             // batteryBorderText
             // 
-            this.batteryBorderText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryBorderText.Location = new System.Drawing.Point(170, 228);
+            this.batteryBorderText.Location = new System.Drawing.Point(109, 143);
+            this.batteryBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderText.Name = "batteryBorderText";
-            this.batteryBorderText.Size = new System.Drawing.Size(146, 33);
+            this.batteryBorderText.Size = new System.Drawing.Size(94, 23);
             this.batteryBorderText.TabIndex = 38;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(29, 285);
+            this.label11.Location = new System.Drawing.Point(19, 178);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(184, 25);
+            this.label11.Size = new System.Drawing.Size(87, 15);
             this.label11.TabIndex = 37;
-            this.label11.Text = "Update interval:";
+            this.label11.Text = "Update interval";
             // 
             // batteryInterval
             // 
-            this.batteryInterval.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.batteryInterval.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.batteryInterval.Location = new System.Drawing.Point(215, 281);
+            this.batteryInterval.Location = new System.Drawing.Point(109, 174);
+            this.batteryInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryInterval.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -330,7 +332,7 @@
             0,
             0});
             this.batteryInterval.Name = "batteryInterval";
-            this.batteryInterval.Size = new System.Drawing.Size(102, 33);
+            this.batteryInterval.Size = new System.Drawing.Size(65, 23);
             this.batteryInterval.TabIndex = 36;
             this.batteryInterval.Value = new decimal(new int[] {
             5000,
@@ -341,30 +343,31 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(428, 179);
+            this.label12.Location = new System.Drawing.Point(272, 112);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 25);
+            this.label12.Size = new System.Drawing.Size(51, 15);
             this.label12.TabIndex = 35;
             this.label12.Text = "Opacity:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(428, 126);
+            this.label13.Location = new System.Drawing.Point(272, 78);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 25);
+            this.label13.Size = new System.Drawing.Size(51, 15);
             this.label13.TabIndex = 34;
             this.label13.Text = "Opacity:";
             // 
             // batteryBackgroundOpacity
             // 
             this.batteryBackgroundOpacity.AutoSize = false;
-            this.batteryBackgroundOpacity.Location = new System.Drawing.Point(536, 176);
+            this.batteryBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.batteryBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundOpacity.Maximum = 255;
             this.batteryBackgroundOpacity.Name = "batteryBackgroundOpacity";
-            this.batteryBackgroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.batteryBackgroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.batteryBackgroundOpacity.TabIndex = 33;
             this.batteryBackgroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.batteryBackgroundOpacity.Scroll += new System.EventHandler(this.batteryBackgroundOpacity_Scroll);
@@ -372,20 +375,21 @@
             // batteryForegroundOpacity
             // 
             this.batteryForegroundOpacity.AutoSize = false;
-            this.batteryForegroundOpacity.Location = new System.Drawing.Point(536, 123);
+            this.batteryForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.batteryForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundOpacity.Maximum = 255;
             this.batteryForegroundOpacity.Name = "batteryForegroundOpacity";
-            this.batteryForegroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.batteryForegroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.batteryForegroundOpacity.TabIndex = 32;
             this.batteryForegroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.batteryForegroundOpacity.Scroll += new System.EventHandler(this.batteryForegroundOpacity_Scroll);
             // 
             // batteryFontButton
             // 
-            this.batteryFontButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryFontButton.Location = new System.Drawing.Point(575, 73);
+            this.batteryFontButton.Location = new System.Drawing.Point(349, 41);
+            this.batteryFontButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontButton.Name = "batteryFontButton";
-            this.batteryFontButton.Size = new System.Drawing.Size(168, 33);
+            this.batteryFontButton.Size = new System.Drawing.Size(107, 25);
             this.batteryFontButton.TabIndex = 31;
             this.batteryFontButton.Text = "Font";
             this.batteryFontButton.UseVisualStyleBackColor = true;
@@ -393,10 +397,10 @@
             // 
             // batteryBackgroundButton
             // 
-            this.batteryBackgroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryBackgroundButton.Location = new System.Drawing.Point(334, 176);
+            this.batteryBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.batteryBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundButton.Name = "batteryBackgroundButton";
-            this.batteryBackgroundButton.Size = new System.Drawing.Size(77, 31);
+            this.batteryBackgroundButton.Size = new System.Drawing.Size(49, 25);
             this.batteryBackgroundButton.TabIndex = 30;
             this.batteryBackgroundButton.Text = "Color";
             this.batteryBackgroundButton.UseVisualStyleBackColor = true;
@@ -404,10 +408,10 @@
             // 
             // batteryForegroundButton
             // 
-            this.batteryForegroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryForegroundButton.Location = new System.Drawing.Point(334, 123);
+            this.batteryForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.batteryForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundButton.Name = "batteryForegroundButton";
-            this.batteryForegroundButton.Size = new System.Drawing.Size(77, 31);
+            this.batteryForegroundButton.Size = new System.Drawing.Size(49, 25);
             this.batteryForegroundButton.TabIndex = 29;
             this.batteryForegroundButton.Text = "Color";
             this.batteryForegroundButton.UseVisualStyleBackColor = true;
@@ -416,56 +420,56 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(29, 179);
+            this.label14.Location = new System.Drawing.Point(19, 112);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 25);
+            this.label14.Size = new System.Drawing.Size(71, 15);
             this.label14.TabIndex = 28;
-            this.label14.Text = "Background:";
+            this.label14.Text = "Background";
             // 
             // batteryBackgroundText
             // 
-            this.batteryBackgroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryBackgroundText.Location = new System.Drawing.Point(171, 175);
+            this.batteryBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.batteryBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundText.Name = "batteryBackgroundText";
-            this.batteryBackgroundText.Size = new System.Drawing.Size(146, 33);
+            this.batteryBackgroundText.Size = new System.Drawing.Size(94, 23);
             this.batteryBackgroundText.TabIndex = 27;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(29, 126);
+            this.label15.Location = new System.Drawing.Point(19, 78);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(142, 25);
+            this.label15.Size = new System.Drawing.Size(69, 15);
             this.label15.TabIndex = 26;
-            this.label15.Text = "Foreground:";
+            this.label15.Text = "Foreground";
             // 
             // batteryForegroundText
             // 
-            this.batteryForegroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryForegroundText.Location = new System.Drawing.Point(171, 122);
+            this.batteryForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.batteryForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundText.Name = "batteryForegroundText";
-            this.batteryForegroundText.Size = new System.Drawing.Size(146, 33);
+            this.batteryForegroundText.Size = new System.Drawing.Size(94, 23);
             this.batteryForegroundText.TabIndex = 25;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(29, 73);
+            this.label16.Location = new System.Drawing.Point(19, 46);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 25);
+            this.label16.Size = new System.Drawing.Size(31, 15);
             this.label16.TabIndex = 24;
-            this.label16.Text = "Font:";
+            this.label16.Text = "Font";
             // 
             // batteryFontText
             // 
-            this.batteryFontText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.batteryFontText.Location = new System.Drawing.Point(170, 73);
+            this.batteryFontText.Location = new System.Drawing.Point(109, 42);
+            this.batteryFontText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontText.Name = "batteryFontText";
             this.batteryFontText.ReadOnly = true;
-            this.batteryFontText.Size = new System.Drawing.Size(399, 33);
+            this.batteryFontText.Size = new System.Drawing.Size(236, 23);
             this.batteryFontText.TabIndex = 23;
             // 
             // tabPage2
@@ -492,10 +496,11 @@
             this.tabPage2.Controls.Add(this.label45);
             this.tabPage2.Controls.Add(this.label44);
             this.tabPage2.Controls.Add(this.cpuPointWidth);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(802, 485);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabPage2.Size = new System.Drawing.Size(474, 210);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CPU";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -503,20 +508,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 285);
+            this.label1.Location = new System.Drawing.Point(176, 178);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 25);
+            this.label1.Size = new System.Drawing.Size(23, 15);
             this.label1.TabIndex = 67;
             this.label1.Text = "ms";
             // 
             // cpuEnabled
             // 
             this.cpuEnabled.AutoSize = true;
-            this.cpuEnabled.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuEnabled.Location = new System.Drawing.Point(24, 19);
+            this.cpuEnabled.Location = new System.Drawing.Point(15, 12);
+            this.cpuEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuEnabled.Name = "cpuEnabled";
-            this.cpuEnabled.Size = new System.Drawing.Size(303, 29);
+            this.cpuEnabled.Size = new System.Drawing.Size(152, 19);
             this.cpuEnabled.TabIndex = 66;
             this.cpuEnabled.Text = "Enable (required restart)";
             this.cpuEnabled.UseVisualStyleBackColor = true;
@@ -524,30 +529,31 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(427, 232);
+            this.label2.Location = new System.Drawing.Point(272, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 65;
             this.label2.Text = "Opacity:";
             // 
             // cpuBorderOpacity
             // 
             this.cpuBorderOpacity.AutoSize = false;
-            this.cpuBorderOpacity.Location = new System.Drawing.Point(536, 229);
+            this.cpuBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.cpuBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderOpacity.Maximum = 255;
             this.cpuBorderOpacity.Name = "cpuBorderOpacity";
-            this.cpuBorderOpacity.Size = new System.Drawing.Size(207, 31);
+            this.cpuBorderOpacity.Size = new System.Drawing.Size(132, 18);
             this.cpuBorderOpacity.TabIndex = 64;
             this.cpuBorderOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.cpuBorderOpacity.Scroll += new System.EventHandler(this.cpuBorderOpacity_Scroll);
             // 
             // cpuBorderButton
             // 
-            this.cpuBorderButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuBorderButton.Location = new System.Drawing.Point(333, 229);
+            this.cpuBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.cpuBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderButton.Name = "cpuBorderButton";
-            this.cpuBorderButton.Size = new System.Drawing.Size(77, 31);
+            this.cpuBorderButton.Size = new System.Drawing.Size(49, 25);
             this.cpuBorderButton.TabIndex = 63;
             this.cpuBorderButton.Text = "Color";
             this.cpuBorderButton.UseVisualStyleBackColor = true;
@@ -556,40 +562,40 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 232);
+            this.label3.Location = new System.Drawing.Point(19, 147);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 25);
+            this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 62;
-            this.label3.Text = "Border:";
+            this.label3.Text = "Border";
             // 
             // cpuBorderText
             // 
-            this.cpuBorderText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuBorderText.Location = new System.Drawing.Point(170, 228);
+            this.cpuBorderText.Location = new System.Drawing.Point(109, 143);
+            this.cpuBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderText.Name = "cpuBorderText";
-            this.cpuBorderText.Size = new System.Drawing.Size(146, 33);
+            this.cpuBorderText.Size = new System.Drawing.Size(94, 23);
             this.cpuBorderText.TabIndex = 61;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 285);
+            this.label4.Location = new System.Drawing.Point(19, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 25);
+            this.label4.Size = new System.Drawing.Size(87, 15);
             this.label4.TabIndex = 60;
-            this.label4.Text = "Update interval:";
+            this.label4.Text = "Update interval";
             // 
             // cpuInterval
             // 
-            this.cpuInterval.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpuInterval.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.cpuInterval.Location = new System.Drawing.Point(215, 281);
+            this.cpuInterval.Location = new System.Drawing.Point(109, 174);
+            this.cpuInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuInterval.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -601,7 +607,7 @@
             0,
             0});
             this.cpuInterval.Name = "cpuInterval";
-            this.cpuInterval.Size = new System.Drawing.Size(102, 33);
+            this.cpuInterval.Size = new System.Drawing.Size(65, 23);
             this.cpuInterval.TabIndex = 59;
             this.cpuInterval.Value = new decimal(new int[] {
             5000,
@@ -612,30 +618,31 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(428, 179);
+            this.label5.Location = new System.Drawing.Point(272, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 25);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 58;
             this.label5.Text = "Opacity:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(428, 126);
+            this.label6.Location = new System.Drawing.Point(272, 78);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.Size = new System.Drawing.Size(51, 15);
             this.label6.TabIndex = 57;
             this.label6.Text = "Opacity:";
             // 
             // cpuBackgroundOpacity
             // 
             this.cpuBackgroundOpacity.AutoSize = false;
-            this.cpuBackgroundOpacity.Location = new System.Drawing.Point(536, 176);
+            this.cpuBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.cpuBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundOpacity.Maximum = 255;
             this.cpuBackgroundOpacity.Name = "cpuBackgroundOpacity";
-            this.cpuBackgroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.cpuBackgroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.cpuBackgroundOpacity.TabIndex = 56;
             this.cpuBackgroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.cpuBackgroundOpacity.Scroll += new System.EventHandler(this.cpuBackgroundOpacity_Scroll);
@@ -643,20 +650,21 @@
             // cpuForegroundOpacity
             // 
             this.cpuForegroundOpacity.AutoSize = false;
-            this.cpuForegroundOpacity.Location = new System.Drawing.Point(536, 123);
+            this.cpuForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.cpuForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundOpacity.Maximum = 255;
             this.cpuForegroundOpacity.Name = "cpuForegroundOpacity";
-            this.cpuForegroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.cpuForegroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.cpuForegroundOpacity.TabIndex = 55;
             this.cpuForegroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.cpuForegroundOpacity.Scroll += new System.EventHandler(this.cpuForegroundOpacity_Scroll);
             // 
             // cpuBackgroundButton
             // 
-            this.cpuBackgroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuBackgroundButton.Location = new System.Drawing.Point(334, 176);
+            this.cpuBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.cpuBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundButton.Name = "cpuBackgroundButton";
-            this.cpuBackgroundButton.Size = new System.Drawing.Size(77, 31);
+            this.cpuBackgroundButton.Size = new System.Drawing.Size(49, 25);
             this.cpuBackgroundButton.TabIndex = 54;
             this.cpuBackgroundButton.Text = "Color";
             this.cpuBackgroundButton.UseVisualStyleBackColor = true;
@@ -664,10 +672,10 @@
             // 
             // cpuForegroundButton
             // 
-            this.cpuForegroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuForegroundButton.Location = new System.Drawing.Point(334, 123);
+            this.cpuForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.cpuForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundButton.Name = "cpuForegroundButton";
-            this.cpuForegroundButton.Size = new System.Drawing.Size(77, 31);
+            this.cpuForegroundButton.Size = new System.Drawing.Size(49, 25);
             this.cpuForegroundButton.TabIndex = 53;
             this.cpuForegroundButton.Text = "Color";
             this.cpuForegroundButton.UseVisualStyleBackColor = true;
@@ -676,58 +684,58 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 179);
+            this.label7.Location = new System.Drawing.Point(19, 112);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 25);
+            this.label7.Size = new System.Drawing.Size(71, 15);
             this.label7.TabIndex = 52;
-            this.label7.Text = "Background:";
+            this.label7.Text = "Background";
             // 
             // cpuBackgroundText
             // 
-            this.cpuBackgroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuBackgroundText.Location = new System.Drawing.Point(171, 175);
+            this.cpuBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.cpuBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundText.Name = "cpuBackgroundText";
-            this.cpuBackgroundText.Size = new System.Drawing.Size(146, 33);
+            this.cpuBackgroundText.Size = new System.Drawing.Size(94, 23);
             this.cpuBackgroundText.TabIndex = 51;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 126);
+            this.label8.Location = new System.Drawing.Point(19, 78);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 25);
+            this.label8.Size = new System.Drawing.Size(69, 15);
             this.label8.TabIndex = 50;
-            this.label8.Text = "Foreground:";
+            this.label8.Text = "Foreground";
             // 
             // cpuForegroundText
             // 
-            this.cpuForegroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuForegroundText.Location = new System.Drawing.Point(171, 122);
+            this.cpuForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.cpuForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundText.Name = "cpuForegroundText";
-            this.cpuForegroundText.Size = new System.Drawing.Size(146, 33);
+            this.cpuForegroundText.Size = new System.Drawing.Size(94, 23);
             this.cpuForegroundText.TabIndex = 49;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(280, 73);
+            this.label45.Location = new System.Drawing.Point(178, 46);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(37, 25);
+            this.label45.Size = new System.Drawing.Size(19, 15);
             this.label45.TabIndex = 48;
             this.label45.Text = "px";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(29, 73);
+            this.label44.Location = new System.Drawing.Point(19, 46);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(138, 25);
+            this.label44.Size = new System.Drawing.Size(68, 15);
             this.label44.TabIndex = 47;
-            this.label44.Text = "Point width:";
+            this.label44.Text = "Point width";
             // 
             // cpuPointWidth
             // 
@@ -737,9 +745,10 @@
             "1",
             "2",
             "4"});
-            this.cpuPointWidth.Location = new System.Drawing.Point(171, 69);
+            this.cpuPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.cpuPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuPointWidth.Name = "cpuPointWidth";
-            this.cpuPointWidth.Size = new System.Drawing.Size(103, 33);
+            this.cpuPointWidth.Size = new System.Drawing.Size(67, 23);
             this.cpuPointWidth.TabIndex = 46;
             // 
             // tabPage3
@@ -766,10 +775,11 @@
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.label27);
             this.tabPage3.Controls.Add(this.ramPointWidth);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(802, 485);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabPage3.Size = new System.Drawing.Size(474, 210);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "RAM";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -777,20 +787,20 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(323, 285);
+            this.label17.Location = new System.Drawing.Point(176, 178);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 25);
+            this.label17.Size = new System.Drawing.Size(23, 15);
             this.label17.TabIndex = 89;
             this.label17.Text = "ms";
             // 
             // ramEnabled
             // 
             this.ramEnabled.AutoSize = true;
-            this.ramEnabled.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramEnabled.Location = new System.Drawing.Point(24, 19);
+            this.ramEnabled.Location = new System.Drawing.Point(15, 12);
+            this.ramEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramEnabled.Name = "ramEnabled";
-            this.ramEnabled.Size = new System.Drawing.Size(303, 29);
+            this.ramEnabled.Size = new System.Drawing.Size(152, 19);
             this.ramEnabled.TabIndex = 88;
             this.ramEnabled.Text = "Enable (required restart)";
             this.ramEnabled.UseVisualStyleBackColor = true;
@@ -798,30 +808,31 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(427, 232);
+            this.label18.Location = new System.Drawing.Point(272, 147);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 25);
+            this.label18.Size = new System.Drawing.Size(51, 15);
             this.label18.TabIndex = 87;
             this.label18.Text = "Opacity:";
             // 
             // ramBorderOpacity
             // 
             this.ramBorderOpacity.AutoSize = false;
-            this.ramBorderOpacity.Location = new System.Drawing.Point(536, 229);
+            this.ramBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.ramBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderOpacity.Maximum = 255;
             this.ramBorderOpacity.Name = "ramBorderOpacity";
-            this.ramBorderOpacity.Size = new System.Drawing.Size(207, 31);
+            this.ramBorderOpacity.Size = new System.Drawing.Size(132, 18);
             this.ramBorderOpacity.TabIndex = 86;
             this.ramBorderOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ramBorderOpacity.Scroll += new System.EventHandler(this.ramBorderOpacity_Scroll);
             // 
             // ramBorderButton
             // 
-            this.ramBorderButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramBorderButton.Location = new System.Drawing.Point(333, 229);
+            this.ramBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.ramBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderButton.Name = "ramBorderButton";
-            this.ramBorderButton.Size = new System.Drawing.Size(77, 31);
+            this.ramBorderButton.Size = new System.Drawing.Size(49, 25);
             this.ramBorderButton.TabIndex = 85;
             this.ramBorderButton.Text = "Color";
             this.ramBorderButton.UseVisualStyleBackColor = true;
@@ -830,40 +841,40 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(29, 232);
+            this.label19.Location = new System.Drawing.Point(19, 147);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 25);
+            this.label19.Size = new System.Drawing.Size(42, 15);
             this.label19.TabIndex = 84;
-            this.label19.Text = "Border:";
+            this.label19.Text = "Border";
             // 
             // ramBorderText
             // 
-            this.ramBorderText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramBorderText.Location = new System.Drawing.Point(170, 228);
+            this.ramBorderText.Location = new System.Drawing.Point(109, 143);
+            this.ramBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderText.Name = "ramBorderText";
-            this.ramBorderText.Size = new System.Drawing.Size(146, 33);
+            this.ramBorderText.Size = new System.Drawing.Size(94, 23);
             this.ramBorderText.TabIndex = 83;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(29, 285);
+            this.label20.Location = new System.Drawing.Point(19, 178);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(184, 25);
+            this.label20.Size = new System.Drawing.Size(87, 15);
             this.label20.TabIndex = 82;
-            this.label20.Text = "Update interval:";
+            this.label20.Text = "Update interval";
             // 
             // ramInterval
             // 
-            this.ramInterval.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ramInterval.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.ramInterval.Location = new System.Drawing.Point(215, 281);
+            this.ramInterval.Location = new System.Drawing.Point(109, 174);
+            this.ramInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramInterval.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -875,7 +886,7 @@
             0,
             0});
             this.ramInterval.Name = "ramInterval";
-            this.ramInterval.Size = new System.Drawing.Size(102, 33);
+            this.ramInterval.Size = new System.Drawing.Size(65, 23);
             this.ramInterval.TabIndex = 81;
             this.ramInterval.Value = new decimal(new int[] {
             5000,
@@ -886,30 +897,31 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(428, 179);
+            this.label21.Location = new System.Drawing.Point(272, 112);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 25);
+            this.label21.Size = new System.Drawing.Size(51, 15);
             this.label21.TabIndex = 80;
             this.label21.Text = "Opacity:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(428, 126);
+            this.label22.Location = new System.Drawing.Point(272, 78);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(102, 25);
+            this.label22.Size = new System.Drawing.Size(51, 15);
             this.label22.TabIndex = 79;
             this.label22.Text = "Opacity:";
             // 
             // ramBackgroundOpacity
             // 
             this.ramBackgroundOpacity.AutoSize = false;
-            this.ramBackgroundOpacity.Location = new System.Drawing.Point(536, 176);
+            this.ramBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.ramBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundOpacity.Maximum = 255;
             this.ramBackgroundOpacity.Name = "ramBackgroundOpacity";
-            this.ramBackgroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.ramBackgroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.ramBackgroundOpacity.TabIndex = 78;
             this.ramBackgroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ramBackgroundOpacity.Scroll += new System.EventHandler(this.ramBackgroundOpacity_Scroll);
@@ -917,20 +929,21 @@
             // ramForegroundOpacity
             // 
             this.ramForegroundOpacity.AutoSize = false;
-            this.ramForegroundOpacity.Location = new System.Drawing.Point(536, 123);
+            this.ramForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.ramForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundOpacity.Maximum = 255;
             this.ramForegroundOpacity.Name = "ramForegroundOpacity";
-            this.ramForegroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.ramForegroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.ramForegroundOpacity.TabIndex = 77;
             this.ramForegroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ramForegroundOpacity.Scroll += new System.EventHandler(this.ramForegroundOpacity_Scroll);
             // 
             // ramBackgroundButton
             // 
-            this.ramBackgroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramBackgroundButton.Location = new System.Drawing.Point(334, 176);
+            this.ramBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.ramBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundButton.Name = "ramBackgroundButton";
-            this.ramBackgroundButton.Size = new System.Drawing.Size(77, 31);
+            this.ramBackgroundButton.Size = new System.Drawing.Size(49, 25);
             this.ramBackgroundButton.TabIndex = 76;
             this.ramBackgroundButton.Text = "Color";
             this.ramBackgroundButton.UseVisualStyleBackColor = true;
@@ -938,10 +951,10 @@
             // 
             // ramForegroundButton
             // 
-            this.ramForegroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramForegroundButton.Location = new System.Drawing.Point(334, 123);
+            this.ramForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.ramForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundButton.Name = "ramForegroundButton";
-            this.ramForegroundButton.Size = new System.Drawing.Size(77, 31);
+            this.ramForegroundButton.Size = new System.Drawing.Size(49, 25);
             this.ramForegroundButton.TabIndex = 75;
             this.ramForegroundButton.Text = "Color";
             this.ramForegroundButton.UseVisualStyleBackColor = true;
@@ -950,58 +963,58 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(29, 179);
+            this.label23.Location = new System.Drawing.Point(19, 112);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(146, 25);
+            this.label23.Size = new System.Drawing.Size(71, 15);
             this.label23.TabIndex = 74;
-            this.label23.Text = "Background:";
+            this.label23.Text = "Background";
             // 
             // ramBackgroundText
             // 
-            this.ramBackgroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramBackgroundText.Location = new System.Drawing.Point(171, 175);
+            this.ramBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.ramBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundText.Name = "ramBackgroundText";
-            this.ramBackgroundText.Size = new System.Drawing.Size(146, 33);
+            this.ramBackgroundText.Size = new System.Drawing.Size(94, 23);
             this.ramBackgroundText.TabIndex = 73;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(29, 126);
+            this.label25.Location = new System.Drawing.Point(19, 78);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(142, 25);
+            this.label25.Size = new System.Drawing.Size(69, 15);
             this.label25.TabIndex = 72;
-            this.label25.Text = "Foreground:";
+            this.label25.Text = "Foreground";
             // 
             // ramForegroundText
             // 
-            this.ramForegroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ramForegroundText.Location = new System.Drawing.Point(171, 122);
+            this.ramForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.ramForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundText.Name = "ramForegroundText";
-            this.ramForegroundText.Size = new System.Drawing.Size(146, 33);
+            this.ramForegroundText.Size = new System.Drawing.Size(94, 23);
             this.ramForegroundText.TabIndex = 71;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(280, 73);
+            this.label26.Location = new System.Drawing.Point(178, 46);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 25);
+            this.label26.Size = new System.Drawing.Size(19, 15);
             this.label26.TabIndex = 70;
             this.label26.Text = "px";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(29, 73);
+            this.label27.Location = new System.Drawing.Point(19, 46);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(138, 25);
+            this.label27.Size = new System.Drawing.Size(68, 15);
             this.label27.TabIndex = 69;
-            this.label27.Text = "Point width:";
+            this.label27.Text = "Point width";
             // 
             // ramPointWidth
             // 
@@ -1011,9 +1024,10 @@
             "1",
             "2",
             "4"});
-            this.ramPointWidth.Location = new System.Drawing.Point(171, 69);
+            this.ramPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.ramPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramPointWidth.Name = "ramPointWidth";
-            this.ramPointWidth.Size = new System.Drawing.Size(103, 33);
+            this.ramPointWidth.Size = new System.Drawing.Size(67, 23);
             this.ramPointWidth.TabIndex = 68;
             // 
             // tabPage4
@@ -1043,11 +1057,11 @@
             this.tabPage4.Controls.Add(this.label32);
             this.tabPage4.Controls.Add(this.label24);
             this.tabPage4.Controls.Add(this.networkMaxBandwidth);
-            this.tabPage4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(802, 485);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabPage4.Size = new System.Drawing.Size(474, 240);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Network";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1055,20 +1069,20 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(323, 285);
+            this.label28.Location = new System.Drawing.Point(176, 178);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(43, 25);
+            this.label28.Size = new System.Drawing.Size(23, 15);
             this.label28.TabIndex = 89;
             this.label28.Text = "ms";
             // 
             // networkEnabled
             // 
             this.networkEnabled.AutoSize = true;
-            this.networkEnabled.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkEnabled.Location = new System.Drawing.Point(24, 19);
+            this.networkEnabled.Location = new System.Drawing.Point(15, 12);
+            this.networkEnabled.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkEnabled.Name = "networkEnabled";
-            this.networkEnabled.Size = new System.Drawing.Size(303, 29);
+            this.networkEnabled.Size = new System.Drawing.Size(152, 19);
             this.networkEnabled.TabIndex = 88;
             this.networkEnabled.Text = "Enable (required restart)";
             this.networkEnabled.UseVisualStyleBackColor = true;
@@ -1076,30 +1090,31 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(427, 232);
+            this.label29.Location = new System.Drawing.Point(272, 147);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(102, 25);
+            this.label29.Size = new System.Drawing.Size(51, 15);
             this.label29.TabIndex = 87;
             this.label29.Text = "Opacity:";
             // 
             // networkBorderOpacity
             // 
             this.networkBorderOpacity.AutoSize = false;
-            this.networkBorderOpacity.Location = new System.Drawing.Point(536, 229);
+            this.networkBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.networkBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderOpacity.Maximum = 255;
             this.networkBorderOpacity.Name = "networkBorderOpacity";
-            this.networkBorderOpacity.Size = new System.Drawing.Size(207, 31);
+            this.networkBorderOpacity.Size = new System.Drawing.Size(132, 18);
             this.networkBorderOpacity.TabIndex = 86;
             this.networkBorderOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.networkBorderOpacity.Scroll += new System.EventHandler(this.networkBorderOpacity_Scroll);
             // 
             // networkBorderButton
             // 
-            this.networkBorderButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkBorderButton.Location = new System.Drawing.Point(333, 229);
+            this.networkBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.networkBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderButton.Name = "networkBorderButton";
-            this.networkBorderButton.Size = new System.Drawing.Size(77, 31);
+            this.networkBorderButton.Size = new System.Drawing.Size(49, 25);
             this.networkBorderButton.TabIndex = 85;
             this.networkBorderButton.Text = "Color";
             this.networkBorderButton.UseVisualStyleBackColor = true;
@@ -1108,40 +1123,40 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(29, 232);
+            this.label30.Location = new System.Drawing.Point(19, 147);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 25);
+            this.label30.Size = new System.Drawing.Size(42, 15);
             this.label30.TabIndex = 84;
-            this.label30.Text = "Border:";
+            this.label30.Text = "Border";
             // 
             // networkBorderText
             // 
-            this.networkBorderText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkBorderText.Location = new System.Drawing.Point(170, 228);
+            this.networkBorderText.Location = new System.Drawing.Point(109, 143);
+            this.networkBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderText.Name = "networkBorderText";
-            this.networkBorderText.Size = new System.Drawing.Size(146, 33);
+            this.networkBorderText.Size = new System.Drawing.Size(94, 23);
             this.networkBorderText.TabIndex = 83;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(29, 285);
+            this.label31.Location = new System.Drawing.Point(19, 178);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(184, 25);
+            this.label31.Size = new System.Drawing.Size(87, 15);
             this.label31.TabIndex = 82;
-            this.label31.Text = "Update interval:";
+            this.label31.Text = "Update interval";
             // 
             // networkInterval
             // 
-            this.networkInterval.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.networkInterval.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.networkInterval.Location = new System.Drawing.Point(215, 281);
+            this.networkInterval.Location = new System.Drawing.Point(109, 174);
+            this.networkInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkInterval.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -1153,7 +1168,7 @@
             0,
             0});
             this.networkInterval.Name = "networkInterval";
-            this.networkInterval.Size = new System.Drawing.Size(102, 33);
+            this.networkInterval.Size = new System.Drawing.Size(65, 23);
             this.networkInterval.TabIndex = 81;
             this.networkInterval.Value = new decimal(new int[] {
             5000,
@@ -1164,30 +1179,31 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(428, 179);
+            this.label33.Location = new System.Drawing.Point(272, 112);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(102, 25);
+            this.label33.Size = new System.Drawing.Size(51, 15);
             this.label33.TabIndex = 80;
             this.label33.Text = "Opacity:";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(428, 126);
+            this.label34.Location = new System.Drawing.Point(272, 78);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(102, 25);
+            this.label34.Size = new System.Drawing.Size(51, 15);
             this.label34.TabIndex = 79;
             this.label34.Text = "Opacity:";
             // 
             // networkBackgroundOpacity
             // 
             this.networkBackgroundOpacity.AutoSize = false;
-            this.networkBackgroundOpacity.Location = new System.Drawing.Point(536, 176);
+            this.networkBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.networkBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundOpacity.Maximum = 255;
             this.networkBackgroundOpacity.Name = "networkBackgroundOpacity";
-            this.networkBackgroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.networkBackgroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.networkBackgroundOpacity.TabIndex = 78;
             this.networkBackgroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.networkBackgroundOpacity.Scroll += new System.EventHandler(this.networkBackgroundOpacity_Scroll);
@@ -1195,20 +1211,21 @@
             // networkForegroundOpacity
             // 
             this.networkForegroundOpacity.AutoSize = false;
-            this.networkForegroundOpacity.Location = new System.Drawing.Point(536, 123);
+            this.networkForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.networkForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundOpacity.Maximum = 255;
             this.networkForegroundOpacity.Name = "networkForegroundOpacity";
-            this.networkForegroundOpacity.Size = new System.Drawing.Size(207, 31);
+            this.networkForegroundOpacity.Size = new System.Drawing.Size(132, 18);
             this.networkForegroundOpacity.TabIndex = 77;
             this.networkForegroundOpacity.TickStyle = System.Windows.Forms.TickStyle.None;
             this.networkForegroundOpacity.Scroll += new System.EventHandler(this.networkForegroundOpacity_Scroll);
             // 
             // networkBackgroundButton
             // 
-            this.networkBackgroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkBackgroundButton.Location = new System.Drawing.Point(334, 176);
+            this.networkBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.networkBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundButton.Name = "networkBackgroundButton";
-            this.networkBackgroundButton.Size = new System.Drawing.Size(77, 31);
+            this.networkBackgroundButton.Size = new System.Drawing.Size(49, 25);
             this.networkBackgroundButton.TabIndex = 76;
             this.networkBackgroundButton.Text = "Color";
             this.networkBackgroundButton.UseVisualStyleBackColor = true;
@@ -1216,10 +1233,10 @@
             // 
             // networkForegroundButton
             // 
-            this.networkForegroundButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkForegroundButton.Location = new System.Drawing.Point(334, 123);
+            this.networkForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.networkForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundButton.Name = "networkForegroundButton";
-            this.networkForegroundButton.Size = new System.Drawing.Size(77, 31);
+            this.networkForegroundButton.Size = new System.Drawing.Size(49, 25);
             this.networkForegroundButton.TabIndex = 75;
             this.networkForegroundButton.Text = "Color";
             this.networkForegroundButton.UseVisualStyleBackColor = true;
@@ -1228,58 +1245,58 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(29, 179);
+            this.label35.Location = new System.Drawing.Point(19, 112);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(146, 25);
+            this.label35.Size = new System.Drawing.Size(71, 15);
             this.label35.TabIndex = 74;
-            this.label35.Text = "Background:";
+            this.label35.Text = "Background";
             // 
             // networkBackgroundText
             // 
-            this.networkBackgroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkBackgroundText.Location = new System.Drawing.Point(171, 175);
+            this.networkBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.networkBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundText.Name = "networkBackgroundText";
-            this.networkBackgroundText.Size = new System.Drawing.Size(146, 33);
+            this.networkBackgroundText.Size = new System.Drawing.Size(94, 23);
             this.networkBackgroundText.TabIndex = 73;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(29, 126);
+            this.label36.Location = new System.Drawing.Point(19, 78);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(142, 25);
+            this.label36.Size = new System.Drawing.Size(69, 15);
             this.label36.TabIndex = 72;
-            this.label36.Text = "Foreground:";
+            this.label36.Text = "Foreground";
             // 
             // networkForegroundText
             // 
-            this.networkForegroundText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkForegroundText.Location = new System.Drawing.Point(171, 122);
+            this.networkForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.networkForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundText.Name = "networkForegroundText";
-            this.networkForegroundText.Size = new System.Drawing.Size(146, 33);
+            this.networkForegroundText.Size = new System.Drawing.Size(94, 23);
             this.networkForegroundText.TabIndex = 71;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(280, 73);
+            this.label37.Location = new System.Drawing.Point(178, 46);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(37, 25);
+            this.label37.Size = new System.Drawing.Size(19, 15);
             this.label37.TabIndex = 70;
             this.label37.Text = "px";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(29, 73);
+            this.label38.Location = new System.Drawing.Point(19, 46);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(138, 25);
+            this.label38.Size = new System.Drawing.Size(68, 15);
             this.label38.TabIndex = 69;
-            this.label38.Text = "Point width:";
+            this.label38.Text = "Point width";
             // 
             // networkPointWidth
             // 
@@ -1289,40 +1306,41 @@
             "1",
             "2",
             "4"});
-            this.networkPointWidth.Location = new System.Drawing.Point(171, 69);
+            this.networkPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.networkPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkPointWidth.Name = "networkPointWidth";
-            this.networkPointWidth.Size = new System.Drawing.Size(103, 33);
+            this.networkPointWidth.Size = new System.Drawing.Size(67, 23);
             this.networkPointWidth.TabIndex = 68;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(368, 338);
+            this.label32.Location = new System.Drawing.Point(209, 211);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(102, 25);
+            this.label32.Size = new System.Drawing.Size(51, 15);
             this.label32.TabIndex = 45;
             this.label32.Text = "kbytes/s";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(29, 338);
+            this.label24.Location = new System.Drawing.Point(19, 211);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(181, 25);
+            this.label24.Size = new System.Drawing.Size(89, 15);
             this.label24.TabIndex = 39;
-            this.label24.Text = "Max bandwidth:";
+            this.label24.Text = "Max bandwidth";
             // 
             // networkMaxBandwidth
             // 
-            this.networkMaxBandwidth.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.networkMaxBandwidth.Increment = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.networkMaxBandwidth.Location = new System.Drawing.Point(215, 334);
+            this.networkMaxBandwidth.Location = new System.Drawing.Point(109, 207);
+            this.networkMaxBandwidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkMaxBandwidth.Maximum = new decimal(new int[] {
             50000000,
             0,
@@ -1334,7 +1352,7 @@
             0,
             0});
             this.networkMaxBandwidth.Name = "networkMaxBandwidth";
-            this.networkMaxBandwidth.Size = new System.Drawing.Size(151, 33);
+            this.networkMaxBandwidth.Size = new System.Drawing.Size(96, 23);
             this.networkMaxBandwidth.TabIndex = 38;
             this.networkMaxBandwidth.Value = new decimal(new int[] {
             1280,
@@ -1344,13 +1362,15 @@
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 596);
+            this.ClientSize = new System.Drawing.Size(493, 313);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SettingsForm";
             this.Text = "Settings";
             this.tabControl1.ResumeLayout(false);
