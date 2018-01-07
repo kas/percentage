@@ -128,6 +128,27 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.networkMaxBandwidth = new System.Windows.Forms.NumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.batteryBorderOpacity)).BeginInit();
@@ -150,6 +171,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.networkBackgroundOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.networkForegroundOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.networkMaxBandwidth)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.SuspendLayout();
             // 
             // colorDialog
@@ -164,7 +206,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(382, 278);
+            this.buttonOk.Location = new System.Drawing.Point(370, 269);
             this.buttonOk.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(104, 29);
@@ -175,7 +217,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(274, 278);
+            this.buttonCancel.Location = new System.Drawing.Point(262, 269);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(104, 29);
@@ -190,37 +232,21 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(8, 8);
+            this.tabControl1.Location = new System.Drawing.Point(4, 4);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(482, 268);
+            this.tabControl1.Size = new System.Drawing.Size(474, 264);
             this.tabControl1.TabIndex = 23;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label40);
+            this.tabPage1.Controls.Add(this.panel5);
+            this.tabPage1.Controls.Add(this.panel4);
+            this.tabPage1.Controls.Add(this.panel3);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.batteryEnabled);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.batteryBorderOpacity);
-            this.tabPage1.Controls.Add(this.batteryBorderButton);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.batteryBorderText);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.batteryInterval);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.batteryBackgroundOpacity);
-            this.tabPage1.Controls.Add(this.batteryForegroundOpacity);
-            this.tabPage1.Controls.Add(this.batteryFontButton);
-            this.tabPage1.Controls.Add(this.batteryBackgroundButton);
-            this.tabPage1.Controls.Add(this.batteryForegroundButton);
-            this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.batteryBackgroundText);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.batteryForegroundText);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.batteryFontText);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
@@ -233,7 +259,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(176, 178);
+            this.label40.Location = new System.Drawing.Point(165, 8);
             this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(23, 15);
@@ -254,7 +280,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(272, 147);
+            this.label9.Location = new System.Drawing.Point(261, 8);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 15);
@@ -264,7 +290,7 @@
             // batteryBorderOpacity
             // 
             this.batteryBorderOpacity.AutoSize = false;
-            this.batteryBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.batteryBorderOpacity.Location = new System.Drawing.Point(315, 6);
             this.batteryBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderOpacity.Maximum = 255;
             this.batteryBorderOpacity.Name = "batteryBorderOpacity";
@@ -275,7 +301,7 @@
             // 
             // batteryBorderButton
             // 
-            this.batteryBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.batteryBorderButton.Location = new System.Drawing.Point(201, 3);
             this.batteryBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderButton.Name = "batteryBorderButton";
             this.batteryBorderButton.Size = new System.Drawing.Size(49, 25);
@@ -287,7 +313,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 147);
+            this.label10.Location = new System.Drawing.Point(8, 8);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 15);
@@ -296,7 +322,7 @@
             // 
             // batteryBorderText
             // 
-            this.batteryBorderText.Location = new System.Drawing.Point(109, 143);
+            this.batteryBorderText.Location = new System.Drawing.Point(98, 4);
             this.batteryBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBorderText.Name = "batteryBorderText";
             this.batteryBorderText.Size = new System.Drawing.Size(94, 23);
@@ -305,7 +331,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 178);
+            this.label11.Location = new System.Drawing.Point(8, 8);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 15);
@@ -319,7 +345,7 @@
             0,
             0,
             0});
-            this.batteryInterval.Location = new System.Drawing.Point(109, 174);
+            this.batteryInterval.Location = new System.Drawing.Point(98, 4);
             this.batteryInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryInterval.Maximum = new decimal(new int[] {
             60000,
@@ -343,7 +369,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(272, 112);
+            this.label12.Location = new System.Drawing.Point(261, 8);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 15);
@@ -353,7 +379,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(272, 78);
+            this.label13.Location = new System.Drawing.Point(261, 8);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 15);
@@ -363,7 +389,7 @@
             // batteryBackgroundOpacity
             // 
             this.batteryBackgroundOpacity.AutoSize = false;
-            this.batteryBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.batteryBackgroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.batteryBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundOpacity.Maximum = 255;
             this.batteryBackgroundOpacity.Name = "batteryBackgroundOpacity";
@@ -375,7 +401,7 @@
             // batteryForegroundOpacity
             // 
             this.batteryForegroundOpacity.AutoSize = false;
-            this.batteryForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.batteryForegroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.batteryForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundOpacity.Maximum = 255;
             this.batteryForegroundOpacity.Name = "batteryForegroundOpacity";
@@ -386,7 +412,7 @@
             // 
             // batteryFontButton
             // 
-            this.batteryFontButton.Location = new System.Drawing.Point(349, 41);
+            this.batteryFontButton.Location = new System.Drawing.Point(338, 3);
             this.batteryFontButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontButton.Name = "batteryFontButton";
             this.batteryFontButton.Size = new System.Drawing.Size(107, 25);
@@ -397,7 +423,7 @@
             // 
             // batteryBackgroundButton
             // 
-            this.batteryBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.batteryBackgroundButton.Location = new System.Drawing.Point(201, 3);
             this.batteryBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundButton.Name = "batteryBackgroundButton";
             this.batteryBackgroundButton.Size = new System.Drawing.Size(49, 25);
@@ -408,7 +434,7 @@
             // 
             // batteryForegroundButton
             // 
-            this.batteryForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.batteryForegroundButton.Location = new System.Drawing.Point(201, 3);
             this.batteryForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundButton.Name = "batteryForegroundButton";
             this.batteryForegroundButton.Size = new System.Drawing.Size(49, 25);
@@ -420,7 +446,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 112);
+            this.label14.Location = new System.Drawing.Point(8, 8);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 15);
@@ -429,7 +455,7 @@
             // 
             // batteryBackgroundText
             // 
-            this.batteryBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.batteryBackgroundText.Location = new System.Drawing.Point(98, 4);
             this.batteryBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryBackgroundText.Name = "batteryBackgroundText";
             this.batteryBackgroundText.Size = new System.Drawing.Size(94, 23);
@@ -438,7 +464,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 78);
+            this.label15.Location = new System.Drawing.Point(8, 8);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 15);
@@ -447,7 +473,7 @@
             // 
             // batteryForegroundText
             // 
-            this.batteryForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.batteryForegroundText.Location = new System.Drawing.Point(98, 4);
             this.batteryForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryForegroundText.Name = "batteryForegroundText";
             this.batteryForegroundText.Size = new System.Drawing.Size(94, 23);
@@ -456,7 +482,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 46);
+            this.label16.Location = new System.Drawing.Point(8, 8);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(31, 15);
@@ -465,7 +491,7 @@
             // 
             // batteryFontText
             // 
-            this.batteryFontText.Location = new System.Drawing.Point(109, 42);
+            this.batteryFontText.Location = new System.Drawing.Point(98, 4);
             this.batteryFontText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.batteryFontText.Name = "batteryFontText";
             this.batteryFontText.ReadOnly = true;
@@ -474,33 +500,17 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.panel10);
+            this.tabPage2.Controls.Add(this.panel9);
+            this.tabPage2.Controls.Add(this.panel8);
+            this.tabPage2.Controls.Add(this.panel7);
+            this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.cpuEnabled);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.cpuBorderOpacity);
-            this.tabPage2.Controls.Add(this.cpuBorderButton);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.cpuBorderText);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.cpuInterval);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.cpuBackgroundOpacity);
-            this.tabPage2.Controls.Add(this.cpuForegroundOpacity);
-            this.tabPage2.Controls.Add(this.cpuBackgroundButton);
-            this.tabPage2.Controls.Add(this.cpuForegroundButton);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.cpuBackgroundText);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.cpuForegroundText);
-            this.tabPage2.Controls.Add(this.label45);
-            this.tabPage2.Controls.Add(this.label44);
-            this.tabPage2.Controls.Add(this.cpuPointWidth);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(474, 210);
+            this.tabPage2.Size = new System.Drawing.Size(474, 240);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CPU";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -508,7 +518,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 178);
+            this.label1.Location = new System.Drawing.Point(165, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 15);
@@ -529,7 +539,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 147);
+            this.label2.Location = new System.Drawing.Point(261, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 15);
@@ -539,7 +549,7 @@
             // cpuBorderOpacity
             // 
             this.cpuBorderOpacity.AutoSize = false;
-            this.cpuBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.cpuBorderOpacity.Location = new System.Drawing.Point(315, 6);
             this.cpuBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderOpacity.Maximum = 255;
             this.cpuBorderOpacity.Name = "cpuBorderOpacity";
@@ -550,7 +560,7 @@
             // 
             // cpuBorderButton
             // 
-            this.cpuBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.cpuBorderButton.Location = new System.Drawing.Point(201, 3);
             this.cpuBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderButton.Name = "cpuBorderButton";
             this.cpuBorderButton.Size = new System.Drawing.Size(49, 25);
@@ -562,7 +572,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 147);
+            this.label3.Location = new System.Drawing.Point(8, 8);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
@@ -571,7 +581,7 @@
             // 
             // cpuBorderText
             // 
-            this.cpuBorderText.Location = new System.Drawing.Point(109, 143);
+            this.cpuBorderText.Location = new System.Drawing.Point(98, 4);
             this.cpuBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBorderText.Name = "cpuBorderText";
             this.cpuBorderText.Size = new System.Drawing.Size(94, 23);
@@ -580,7 +590,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 178);
+            this.label4.Location = new System.Drawing.Point(8, 8);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 15);
@@ -594,7 +604,7 @@
             0,
             0,
             0});
-            this.cpuInterval.Location = new System.Drawing.Point(109, 174);
+            this.cpuInterval.Location = new System.Drawing.Point(98, 4);
             this.cpuInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuInterval.Maximum = new decimal(new int[] {
             60000,
@@ -618,7 +628,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(272, 112);
+            this.label5.Location = new System.Drawing.Point(261, 8);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 15);
@@ -628,7 +638,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(272, 78);
+            this.label6.Location = new System.Drawing.Point(261, 8);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 15);
@@ -638,7 +648,7 @@
             // cpuBackgroundOpacity
             // 
             this.cpuBackgroundOpacity.AutoSize = false;
-            this.cpuBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.cpuBackgroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.cpuBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundOpacity.Maximum = 255;
             this.cpuBackgroundOpacity.Name = "cpuBackgroundOpacity";
@@ -650,7 +660,7 @@
             // cpuForegroundOpacity
             // 
             this.cpuForegroundOpacity.AutoSize = false;
-            this.cpuForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.cpuForegroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.cpuForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundOpacity.Maximum = 255;
             this.cpuForegroundOpacity.Name = "cpuForegroundOpacity";
@@ -661,7 +671,7 @@
             // 
             // cpuBackgroundButton
             // 
-            this.cpuBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.cpuBackgroundButton.Location = new System.Drawing.Point(201, 3);
             this.cpuBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundButton.Name = "cpuBackgroundButton";
             this.cpuBackgroundButton.Size = new System.Drawing.Size(49, 25);
@@ -672,7 +682,7 @@
             // 
             // cpuForegroundButton
             // 
-            this.cpuForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.cpuForegroundButton.Location = new System.Drawing.Point(201, 3);
             this.cpuForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundButton.Name = "cpuForegroundButton";
             this.cpuForegroundButton.Size = new System.Drawing.Size(49, 25);
@@ -684,7 +694,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 112);
+            this.label7.Location = new System.Drawing.Point(8, 8);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 15);
@@ -693,7 +703,7 @@
             // 
             // cpuBackgroundText
             // 
-            this.cpuBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.cpuBackgroundText.Location = new System.Drawing.Point(98, 4);
             this.cpuBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuBackgroundText.Name = "cpuBackgroundText";
             this.cpuBackgroundText.Size = new System.Drawing.Size(94, 23);
@@ -702,7 +712,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 78);
+            this.label8.Location = new System.Drawing.Point(8, 8);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 15);
@@ -711,7 +721,7 @@
             // 
             // cpuForegroundText
             // 
-            this.cpuForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.cpuForegroundText.Location = new System.Drawing.Point(98, 4);
             this.cpuForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuForegroundText.Name = "cpuForegroundText";
             this.cpuForegroundText.Size = new System.Drawing.Size(94, 23);
@@ -720,7 +730,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(178, 46);
+            this.label45.Location = new System.Drawing.Point(167, 8);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(19, 15);
@@ -730,7 +740,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(19, 46);
+            this.label44.Location = new System.Drawing.Point(8, 8);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(68, 15);
@@ -745,7 +755,7 @@
             "1",
             "2",
             "4"});
-            this.cpuPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.cpuPointWidth.Location = new System.Drawing.Point(98, 4);
             this.cpuPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cpuPointWidth.Name = "cpuPointWidth";
             this.cpuPointWidth.Size = new System.Drawing.Size(67, 23);
@@ -753,33 +763,17 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.panel15);
+            this.tabPage3.Controls.Add(this.panel14);
+            this.tabPage3.Controls.Add(this.panel13);
+            this.tabPage3.Controls.Add(this.panel12);
+            this.tabPage3.Controls.Add(this.panel11);
             this.tabPage3.Controls.Add(this.ramEnabled);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.ramBorderOpacity);
-            this.tabPage3.Controls.Add(this.ramBorderButton);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.ramBorderText);
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.ramInterval);
-            this.tabPage3.Controls.Add(this.label21);
-            this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.ramBackgroundOpacity);
-            this.tabPage3.Controls.Add(this.ramForegroundOpacity);
-            this.tabPage3.Controls.Add(this.ramBackgroundButton);
-            this.tabPage3.Controls.Add(this.ramForegroundButton);
-            this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.ramBackgroundText);
-            this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Controls.Add(this.ramForegroundText);
-            this.tabPage3.Controls.Add(this.label26);
-            this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.ramPointWidth);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(474, 210);
+            this.tabPage3.Size = new System.Drawing.Size(474, 240);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "RAM";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -787,7 +781,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(176, 178);
+            this.label17.Location = new System.Drawing.Point(165, 8);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 15);
@@ -808,7 +802,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(272, 147);
+            this.label18.Location = new System.Drawing.Point(261, 8);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 15);
@@ -818,7 +812,7 @@
             // ramBorderOpacity
             // 
             this.ramBorderOpacity.AutoSize = false;
-            this.ramBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.ramBorderOpacity.Location = new System.Drawing.Point(315, 6);
             this.ramBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderOpacity.Maximum = 255;
             this.ramBorderOpacity.Name = "ramBorderOpacity";
@@ -829,7 +823,7 @@
             // 
             // ramBorderButton
             // 
-            this.ramBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.ramBorderButton.Location = new System.Drawing.Point(201, 3);
             this.ramBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderButton.Name = "ramBorderButton";
             this.ramBorderButton.Size = new System.Drawing.Size(49, 25);
@@ -841,7 +835,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(19, 147);
+            this.label19.Location = new System.Drawing.Point(8, 8);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(42, 15);
@@ -850,7 +844,7 @@
             // 
             // ramBorderText
             // 
-            this.ramBorderText.Location = new System.Drawing.Point(109, 143);
+            this.ramBorderText.Location = new System.Drawing.Point(98, 4);
             this.ramBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBorderText.Name = "ramBorderText";
             this.ramBorderText.Size = new System.Drawing.Size(94, 23);
@@ -859,7 +853,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(19, 178);
+            this.label20.Location = new System.Drawing.Point(8, 8);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 15);
@@ -873,7 +867,7 @@
             0,
             0,
             0});
-            this.ramInterval.Location = new System.Drawing.Point(109, 174);
+            this.ramInterval.Location = new System.Drawing.Point(98, 4);
             this.ramInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramInterval.Maximum = new decimal(new int[] {
             60000,
@@ -897,7 +891,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(272, 112);
+            this.label21.Location = new System.Drawing.Point(261, 8);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(51, 15);
@@ -907,7 +901,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(272, 78);
+            this.label22.Location = new System.Drawing.Point(261, 8);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 15);
@@ -917,7 +911,7 @@
             // ramBackgroundOpacity
             // 
             this.ramBackgroundOpacity.AutoSize = false;
-            this.ramBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.ramBackgroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.ramBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundOpacity.Maximum = 255;
             this.ramBackgroundOpacity.Name = "ramBackgroundOpacity";
@@ -929,7 +923,7 @@
             // ramForegroundOpacity
             // 
             this.ramForegroundOpacity.AutoSize = false;
-            this.ramForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.ramForegroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.ramForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundOpacity.Maximum = 255;
             this.ramForegroundOpacity.Name = "ramForegroundOpacity";
@@ -940,7 +934,7 @@
             // 
             // ramBackgroundButton
             // 
-            this.ramBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.ramBackgroundButton.Location = new System.Drawing.Point(201, 3);
             this.ramBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundButton.Name = "ramBackgroundButton";
             this.ramBackgroundButton.Size = new System.Drawing.Size(49, 25);
@@ -951,7 +945,7 @@
             // 
             // ramForegroundButton
             // 
-            this.ramForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.ramForegroundButton.Location = new System.Drawing.Point(201, 3);
             this.ramForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundButton.Name = "ramForegroundButton";
             this.ramForegroundButton.Size = new System.Drawing.Size(49, 25);
@@ -963,7 +957,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(19, 112);
+            this.label23.Location = new System.Drawing.Point(8, 8);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(71, 15);
@@ -972,7 +966,7 @@
             // 
             // ramBackgroundText
             // 
-            this.ramBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.ramBackgroundText.Location = new System.Drawing.Point(98, 4);
             this.ramBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramBackgroundText.Name = "ramBackgroundText";
             this.ramBackgroundText.Size = new System.Drawing.Size(94, 23);
@@ -981,7 +975,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(19, 78);
+            this.label25.Location = new System.Drawing.Point(8, 8);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(69, 15);
@@ -990,7 +984,7 @@
             // 
             // ramForegroundText
             // 
-            this.ramForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.ramForegroundText.Location = new System.Drawing.Point(98, 4);
             this.ramForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramForegroundText.Name = "ramForegroundText";
             this.ramForegroundText.Size = new System.Drawing.Size(94, 23);
@@ -999,7 +993,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(178, 46);
+            this.label26.Location = new System.Drawing.Point(167, 8);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(19, 15);
@@ -1009,7 +1003,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(19, 46);
+            this.label27.Location = new System.Drawing.Point(8, 8);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(68, 15);
@@ -1024,7 +1018,7 @@
             "1",
             "2",
             "4"});
-            this.ramPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.ramPointWidth.Location = new System.Drawing.Point(98, 4);
             this.ramPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ramPointWidth.Name = "ramPointWidth";
             this.ramPointWidth.Size = new System.Drawing.Size(67, 23);
@@ -1032,36 +1026,18 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.panel21);
+            this.tabPage4.Controls.Add(this.panel20);
+            this.tabPage4.Controls.Add(this.panel19);
+            this.tabPage4.Controls.Add(this.panel18);
+            this.tabPage4.Controls.Add(this.panel17);
+            this.tabPage4.Controls.Add(this.panel16);
             this.tabPage4.Controls.Add(this.networkEnabled);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.networkBorderOpacity);
-            this.tabPage4.Controls.Add(this.networkBorderButton);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.networkBorderText);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.networkInterval);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.networkBackgroundOpacity);
-            this.tabPage4.Controls.Add(this.networkForegroundOpacity);
-            this.tabPage4.Controls.Add(this.networkBackgroundButton);
-            this.tabPage4.Controls.Add(this.networkForegroundButton);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.networkBackgroundText);
-            this.tabPage4.Controls.Add(this.label36);
-            this.tabPage4.Controls.Add(this.networkForegroundText);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Controls.Add(this.networkPointWidth);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.networkMaxBandwidth);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage4.Size = new System.Drawing.Size(474, 240);
+            this.tabPage4.Size = new System.Drawing.Size(466, 236);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Network";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1069,7 +1045,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(176, 178);
+            this.label28.Location = new System.Drawing.Point(165, 8);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(23, 15);
@@ -1090,7 +1066,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(272, 147);
+            this.label29.Location = new System.Drawing.Point(261, 8);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(51, 15);
@@ -1100,7 +1076,7 @@
             // networkBorderOpacity
             // 
             this.networkBorderOpacity.AutoSize = false;
-            this.networkBorderOpacity.Location = new System.Drawing.Point(326, 145);
+            this.networkBorderOpacity.Location = new System.Drawing.Point(315, 6);
             this.networkBorderOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderOpacity.Maximum = 255;
             this.networkBorderOpacity.Name = "networkBorderOpacity";
@@ -1111,7 +1087,7 @@
             // 
             // networkBorderButton
             // 
-            this.networkBorderButton.Location = new System.Drawing.Point(212, 142);
+            this.networkBorderButton.Location = new System.Drawing.Point(201, 3);
             this.networkBorderButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderButton.Name = "networkBorderButton";
             this.networkBorderButton.Size = new System.Drawing.Size(49, 25);
@@ -1123,7 +1099,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(19, 147);
+            this.label30.Location = new System.Drawing.Point(8, 8);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(42, 15);
@@ -1132,7 +1108,7 @@
             // 
             // networkBorderText
             // 
-            this.networkBorderText.Location = new System.Drawing.Point(109, 143);
+            this.networkBorderText.Location = new System.Drawing.Point(98, 4);
             this.networkBorderText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBorderText.Name = "networkBorderText";
             this.networkBorderText.Size = new System.Drawing.Size(94, 23);
@@ -1141,7 +1117,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(19, 178);
+            this.label31.Location = new System.Drawing.Point(8, 8);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(87, 15);
@@ -1155,7 +1131,7 @@
             0,
             0,
             0});
-            this.networkInterval.Location = new System.Drawing.Point(109, 174);
+            this.networkInterval.Location = new System.Drawing.Point(98, 4);
             this.networkInterval.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkInterval.Maximum = new decimal(new int[] {
             60000,
@@ -1179,7 +1155,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(272, 112);
+            this.label33.Location = new System.Drawing.Point(261, 8);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(51, 15);
@@ -1189,7 +1165,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(272, 78);
+            this.label34.Location = new System.Drawing.Point(261, 8);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(51, 15);
@@ -1199,7 +1175,7 @@
             // networkBackgroundOpacity
             // 
             this.networkBackgroundOpacity.AutoSize = false;
-            this.networkBackgroundOpacity.Location = new System.Drawing.Point(326, 110);
+            this.networkBackgroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.networkBackgroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundOpacity.Maximum = 255;
             this.networkBackgroundOpacity.Name = "networkBackgroundOpacity";
@@ -1211,7 +1187,7 @@
             // networkForegroundOpacity
             // 
             this.networkForegroundOpacity.AutoSize = false;
-            this.networkForegroundOpacity.Location = new System.Drawing.Point(326, 76);
+            this.networkForegroundOpacity.Location = new System.Drawing.Point(315, 6);
             this.networkForegroundOpacity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundOpacity.Maximum = 255;
             this.networkForegroundOpacity.Name = "networkForegroundOpacity";
@@ -1222,7 +1198,7 @@
             // 
             // networkBackgroundButton
             // 
-            this.networkBackgroundButton.Location = new System.Drawing.Point(212, 107);
+            this.networkBackgroundButton.Location = new System.Drawing.Point(201, 3);
             this.networkBackgroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundButton.Name = "networkBackgroundButton";
             this.networkBackgroundButton.Size = new System.Drawing.Size(49, 25);
@@ -1233,7 +1209,7 @@
             // 
             // networkForegroundButton
             // 
-            this.networkForegroundButton.Location = new System.Drawing.Point(212, 73);
+            this.networkForegroundButton.Location = new System.Drawing.Point(201, 3);
             this.networkForegroundButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundButton.Name = "networkForegroundButton";
             this.networkForegroundButton.Size = new System.Drawing.Size(49, 25);
@@ -1245,7 +1221,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(19, 112);
+            this.label35.Location = new System.Drawing.Point(8, 8);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(71, 15);
@@ -1254,7 +1230,7 @@
             // 
             // networkBackgroundText
             // 
-            this.networkBackgroundText.Location = new System.Drawing.Point(109, 108);
+            this.networkBackgroundText.Location = new System.Drawing.Point(98, 4);
             this.networkBackgroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkBackgroundText.Name = "networkBackgroundText";
             this.networkBackgroundText.Size = new System.Drawing.Size(94, 23);
@@ -1263,7 +1239,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(19, 78);
+            this.label36.Location = new System.Drawing.Point(8, 8);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(69, 15);
@@ -1272,7 +1248,7 @@
             // 
             // networkForegroundText
             // 
-            this.networkForegroundText.Location = new System.Drawing.Point(109, 74);
+            this.networkForegroundText.Location = new System.Drawing.Point(98, 4);
             this.networkForegroundText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkForegroundText.Name = "networkForegroundText";
             this.networkForegroundText.Size = new System.Drawing.Size(94, 23);
@@ -1281,7 +1257,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(178, 46);
+            this.label37.Location = new System.Drawing.Point(167, 8);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(19, 15);
@@ -1291,7 +1267,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(19, 46);
+            this.label38.Location = new System.Drawing.Point(8, 8);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(68, 15);
@@ -1306,7 +1282,7 @@
             "1",
             "2",
             "4"});
-            this.networkPointWidth.Location = new System.Drawing.Point(109, 42);
+            this.networkPointWidth.Location = new System.Drawing.Point(98, 4);
             this.networkPointWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkPointWidth.Name = "networkPointWidth";
             this.networkPointWidth.Size = new System.Drawing.Size(67, 23);
@@ -1315,7 +1291,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(209, 211);
+            this.label32.Location = new System.Drawing.Point(198, 8);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(51, 15);
@@ -1325,7 +1301,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(19, 211);
+            this.label24.Location = new System.Drawing.Point(8, 8);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(89, 15);
@@ -1339,7 +1315,7 @@
             0,
             0,
             0});
-            this.networkMaxBandwidth.Location = new System.Drawing.Point(109, 207);
+            this.networkMaxBandwidth.Location = new System.Drawing.Point(98, 4);
             this.networkMaxBandwidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.networkMaxBandwidth.Maximum = new decimal(new int[] {
             50000000,
@@ -1360,11 +1336,245 @@
             0,
             0});
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.batteryFontText);
+            this.panel1.Controls.Add(this.batteryFontButton);
+            this.panel1.Location = new System.Drawing.Point(8, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(450, 32);
+            this.panel1.TabIndex = 45;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.batteryForegroundText);
+            this.panel2.Controls.Add(this.batteryForegroundButton);
+            this.panel2.Controls.Add(this.batteryForegroundOpacity);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(8, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(450, 32);
+            this.panel2.TabIndex = 46;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.batteryBackgroundText);
+            this.panel3.Controls.Add(this.batteryBackgroundButton);
+            this.panel3.Controls.Add(this.batteryBackgroundOpacity);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Location = new System.Drawing.Point(8, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(450, 32);
+            this.panel3.TabIndex = 47;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.batteryBorderText);
+            this.panel4.Controls.Add(this.batteryBorderButton);
+            this.panel4.Controls.Add(this.batteryBorderOpacity);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Location = new System.Drawing.Point(8, 132);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(450, 32);
+            this.panel4.TabIndex = 48;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.batteryInterval);
+            this.panel5.Controls.Add(this.label40);
+            this.panel5.Location = new System.Drawing.Point(8, 164);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(450, 32);
+            this.panel5.TabIndex = 49;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label44);
+            this.panel6.Controls.Add(this.cpuPointWidth);
+            this.panel6.Controls.Add(this.label45);
+            this.panel6.Location = new System.Drawing.Point(8, 36);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(450, 32);
+            this.panel6.TabIndex = 68;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.cpuForegroundText);
+            this.panel7.Controls.Add(this.cpuForegroundButton);
+            this.panel7.Controls.Add(this.cpuForegroundOpacity);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Location = new System.Drawing.Point(8, 68);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(450, 32);
+            this.panel7.TabIndex = 69;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.cpuBackgroundText);
+            this.panel8.Controls.Add(this.cpuBackgroundButton);
+            this.panel8.Controls.Add(this.cpuBackgroundOpacity);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Location = new System.Drawing.Point(8, 100);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(450, 32);
+            this.panel8.TabIndex = 70;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Controls.Add(this.cpuBorderText);
+            this.panel9.Controls.Add(this.cpuBorderButton);
+            this.panel9.Controls.Add(this.cpuBorderOpacity);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Location = new System.Drawing.Point(8, 132);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(450, 32);
+            this.panel9.TabIndex = 71;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Controls.Add(this.cpuInterval);
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Location = new System.Drawing.Point(8, 164);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(450, 32);
+            this.panel10.TabIndex = 72;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label27);
+            this.panel11.Controls.Add(this.ramPointWidth);
+            this.panel11.Controls.Add(this.label26);
+            this.panel11.Location = new System.Drawing.Point(8, 36);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(450, 32);
+            this.panel11.TabIndex = 90;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label25);
+            this.panel12.Controls.Add(this.ramForegroundText);
+            this.panel12.Controls.Add(this.ramForegroundButton);
+            this.panel12.Controls.Add(this.ramForegroundOpacity);
+            this.panel12.Controls.Add(this.label22);
+            this.panel12.Location = new System.Drawing.Point(8, 68);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(450, 32);
+            this.panel12.TabIndex = 91;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label23);
+            this.panel13.Controls.Add(this.ramBackgroundText);
+            this.panel13.Controls.Add(this.ramBackgroundButton);
+            this.panel13.Controls.Add(this.ramBackgroundOpacity);
+            this.panel13.Controls.Add(this.label21);
+            this.panel13.Location = new System.Drawing.Point(8, 100);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(450, 32);
+            this.panel13.TabIndex = 92;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.label19);
+            this.panel14.Controls.Add(this.ramBorderText);
+            this.panel14.Controls.Add(this.ramBorderButton);
+            this.panel14.Controls.Add(this.ramBorderOpacity);
+            this.panel14.Controls.Add(this.label18);
+            this.panel14.Location = new System.Drawing.Point(8, 132);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(450, 32);
+            this.panel14.TabIndex = 93;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.label20);
+            this.panel15.Controls.Add(this.ramInterval);
+            this.panel15.Controls.Add(this.label17);
+            this.panel15.Location = new System.Drawing.Point(8, 164);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(450, 32);
+            this.panel15.TabIndex = 94;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.label38);
+            this.panel16.Controls.Add(this.networkPointWidth);
+            this.panel16.Controls.Add(this.label37);
+            this.panel16.Location = new System.Drawing.Point(8, 36);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(450, 32);
+            this.panel16.TabIndex = 90;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.label36);
+            this.panel17.Controls.Add(this.networkForegroundText);
+            this.panel17.Controls.Add(this.networkForegroundButton);
+            this.panel17.Controls.Add(this.networkForegroundOpacity);
+            this.panel17.Controls.Add(this.label34);
+            this.panel17.Location = new System.Drawing.Point(8, 68);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(450, 32);
+            this.panel17.TabIndex = 91;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label35);
+            this.panel18.Controls.Add(this.networkBackgroundText);
+            this.panel18.Controls.Add(this.networkBackgroundButton);
+            this.panel18.Controls.Add(this.networkBackgroundOpacity);
+            this.panel18.Controls.Add(this.label33);
+            this.panel18.Location = new System.Drawing.Point(8, 100);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(450, 32);
+            this.panel18.TabIndex = 92;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.label30);
+            this.panel19.Controls.Add(this.networkBorderText);
+            this.panel19.Controls.Add(this.networkBorderButton);
+            this.panel19.Controls.Add(this.networkBorderOpacity);
+            this.panel19.Controls.Add(this.label29);
+            this.panel19.Location = new System.Drawing.Point(8, 132);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(450, 32);
+            this.panel19.TabIndex = 93;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.label31);
+            this.panel20.Controls.Add(this.networkInterval);
+            this.panel20.Controls.Add(this.label28);
+            this.panel20.Location = new System.Drawing.Point(8, 164);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(450, 32);
+            this.panel20.TabIndex = 94;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.label24);
+            this.panel21.Controls.Add(this.networkMaxBandwidth);
+            this.panel21.Controls.Add(this.label32);
+            this.panel21.Location = new System.Drawing.Point(8, 196);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(450, 32);
+            this.panel21.TabIndex = 95;
+            // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 313);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(478, 302);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
@@ -1399,6 +1609,48 @@
             ((System.ComponentModel.ISupportInitialize)(this.networkBackgroundOpacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.networkForegroundOpacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.networkMaxBandwidth)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1505,5 +1757,26 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox networkPointWidth;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel16;
     }
 }
