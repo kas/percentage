@@ -58,7 +58,7 @@ namespace percentage
         {
             updateTimer.Stop();
             updateTimer.Interval = interval;
-            updateTimer.Start();
+            //updateTimer.Start();
         }
 
         public void ChangeIcon(Bitmap bitmap, string tooltip)
@@ -105,6 +105,7 @@ namespace percentage
         private void DelayedIconStart(object sender, EventArgs e)
         {
             ((Timer)sender).Stop();
+            updateTimer.Start();
             UpdateIcon(sender, e);
         }
 
