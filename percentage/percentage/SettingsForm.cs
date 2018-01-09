@@ -16,6 +16,7 @@ namespace percentage
         SettingsCpu settingsCpu;
         SettingsRam settingsRam;
         SettingsNetwork settingsNetwork;
+        SettingsDisk settingsDisk;
 
         public SettingsForm()
         {
@@ -76,6 +77,32 @@ namespace percentage
             networkBorderOpacity.Value = settingsNetwork.borderColor.A;
             networkInterval.Value = settingsNetwork.updateInterval;
             networkMaxBandwidth.Value = settingsNetwork.maxBandwith;
+
+            // disk
+            settingsDisk = SettingsDisk.Instance;
+            var availableDisks = DiskIcon.GetDisks();
+            availableDisks.Add("");
+            availableDisks.Sort();
+            diskEnabled.Checked = settingsDisk.enabled > 0;
+            diskPosition.SelectedIndex = diskPosition.FindStringExact(settingsDisk.position.ToString());
+            diskPointWidth.SelectedIndex = diskPointWidth.FindStringExact(settingsDisk.pointWidth.ToString());
+            diskName1.DataSource = new List<string>(availableDisks);
+            diskName1.SelectedIndex = diskName1.FindStringExact(settingsDisk.name_disk1);
+            diskColor1.Text = Utils.ColorToString(settingsDisk.foregroundColor_disk1);
+            diskColor1Opacity.Value = settingsDisk.foregroundColor_disk1.A;
+            diskName2.DataSource = new List<string>(availableDisks);
+            diskName2.SelectedIndex = diskName2.FindStringExact(settingsDisk.name_disk2);
+            diskColor2.Text = Utils.ColorToString(settingsDisk.foregroundColor_disk2);
+            diskColor2Opacity.Value = settingsDisk.foregroundColor_disk2.A;
+            diskName3.DataSource = new List<string>(availableDisks);
+            diskName3.SelectedIndex = diskName3.FindStringExact(settingsDisk.name_disk3);
+            diskColor3.Text = Utils.ColorToString(settingsDisk.foregroundColor_disk3);
+            diskColor3Opacity.Value = settingsDisk.foregroundColor_disk3.A;
+            diskBackgroundText.Text = Utils.ColorToString(settingsDisk.backgroundColor);
+            diskBackgroundOpacity.Value = settingsDisk.backgroundColor.A;
+            diskBorderText.Text = Utils.ColorToString(settingsDisk.borderColor);
+            diskBorderOpacity.Value = settingsDisk.borderColor.A;
+            diskInterval.Value = settingsDisk.updateInterval;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -130,6 +157,25 @@ namespace percentage
             settingsNetwork.borderColor = Utils.ColorFromString(networkBorderText.Text);
             settingsNetwork.updateInterval = (int)networkInterval.Value;
             settingsNetwork.maxBandwith = (int)networkMaxBandwidth.Value;
+
+            // disk
+            settingsDisk.enabled = Convert.ToInt32(diskEnabled.Checked);
+            if (diskPosition.SelectedIndex >= 0)
+                settingsDisk.position = Convert.ToInt32(diskPosition.Items[diskPosition.SelectedIndex]);
+            if (diskPointWidth.SelectedIndex >= 0)
+                settingsDisk.pointWidth = Convert.ToInt32(diskPointWidth.Items[diskPointWidth.SelectedIndex]);
+            if (diskName1.SelectedIndex >= 0)
+                settingsDisk.name_disk1 = diskName1.Items[diskName1.SelectedIndex].ToString();
+            if (diskName2.SelectedIndex >= 0)
+                settingsDisk.name_disk2 = diskName2.Items[diskName2.SelectedIndex].ToString();
+            if (diskName3.SelectedIndex >= 0)
+                settingsDisk.name_disk3 = diskName3.Items[diskName3.SelectedIndex].ToString();
+            settingsDisk.foregroundColor_disk1 = Utils.ColorFromString(diskColor1.Text);
+            settingsDisk.foregroundColor_disk2 = Utils.ColorFromString(diskColor2.Text);
+            settingsDisk.foregroundColor_disk3 = Utils.ColorFromString(diskColor3.Text);
+            settingsDisk.backgroundColor = Utils.ColorFromString(diskBackgroundText.Text);
+            settingsDisk.borderColor = Utils.ColorFromString(diskBorderText.Text);
+            settingsDisk.updateInterval = (int)diskInterval.Value;
 
             Close();
         }
@@ -324,6 +370,81 @@ namespace percentage
             Color color = Utils.ColorFromString(networkBorderText.Text);
             Color color2 = Color.FromArgb(networkBorderOpacity.Value, color.R, color.G, color.B);
             networkBorderText.Text = Utils.ColorToString(color2);
+        }
+
+        private void diskColor1Button_Click(object sender, EventArgs e)
+        {
+            colorDialog.Color = Utils.ColorFromString(diskColor1.Text);
+            colorDialog.ShowDialog();
+            Color color = Color.FromArgb(diskColor1Opacity.Value, colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B);
+            diskColor1.Text = Utils.ColorToString(color);
+        }
+
+        private void diskColor2Button_Click(object sender, EventArgs e)
+        {
+            colorDialog.Color = Utils.ColorFromString(diskColor2.Text);
+            colorDialog.ShowDialog();
+            Color color = Color.FromArgb(diskColor2Opacity.Value, colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B);
+            diskColor2.Text = Utils.ColorToString(color);
+        }
+
+        private void diskColor3Button_Click(object sender, EventArgs e)
+        {
+            colorDialog.Color = Utils.ColorFromString(diskColor3.Text);
+            colorDialog.ShowDialog();
+            Color color = Color.FromArgb(diskColor3Opacity.Value, colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B);
+            diskColor3.Text = Utils.ColorToString(color);
+        }
+
+        private void diskBackgroundButton_Click(object sender, EventArgs e)
+        {
+            colorDialog.Color = Utils.ColorFromString(diskBackgroundText.Text);
+            colorDialog.ShowDialog();
+            Color color = Color.FromArgb(diskBackgroundOpacity.Value, colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B);
+            diskBackgroundText.Text = Utils.ColorToString(color);
+        }
+
+        private void diskBorderButton_Click(object sender, EventArgs e)
+        {
+            colorDialog.Color = Utils.ColorFromString(diskBorderText.Text);
+            colorDialog.ShowDialog();
+            Color color = Color.FromArgb(diskBorderOpacity.Value, colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B);
+            diskBorderText.Text = Utils.ColorToString(color);
+        }
+
+        private void diskColor1Opacity_Scroll(object sender, EventArgs e)
+        {
+            Color color = Utils.ColorFromString(diskColor1.Text);
+            Color color2 = Color.FromArgb(diskColor1Opacity.Value, color.R, color.G, color.B);
+            diskColor1.Text = Utils.ColorToString(color2);
+        }
+
+        private void diskColor2Opacity_Scroll(object sender, EventArgs e)
+        {
+            Color color = Utils.ColorFromString(diskColor2.Text);
+            Color color2 = Color.FromArgb(diskColor2Opacity.Value, color.R, color.G, color.B);
+            diskColor2.Text = Utils.ColorToString(color2);
+        }
+
+        private void diskColor3Opacity_Scroll(object sender, EventArgs e)
+        {
+            Color color = Utils.ColorFromString(diskColor3.Text);
+            Color color2 = Color.FromArgb(diskColor3Opacity.Value, color.R, color.G, color.B);
+            diskColor3.Text = Utils.ColorToString(color2);
+        }
+
+        private void diskBackgroundOpacity_Scroll(object sender, EventArgs e)
+        {
+            Color color = Utils.ColorFromString(diskBackgroundText.Text);
+            Color color2 = Color.FromArgb(diskBackgroundOpacity.Value, color.R, color.G, color.B);
+            diskBackgroundText.Text = Utils.ColorToString(color2);
+        }
+
+        private void diskBorderOpacity_Scroll(object sender, EventArgs e)
+        {
+            Color color = Utils.ColorFromString(diskBorderText.Text);
+            Color color2 = Color.FromArgb(diskBorderOpacity.Value, color.R, color.G, color.B);
+            diskBorderText.Text = Utils.ColorToString(color2);
         }
     }
 }

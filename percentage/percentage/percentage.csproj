@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiskIcon.cs" />
     <Compile Include="NetworkIcon.cs" />
     <Compile Include="RamIcon.cs" />
     <Compile Include="CpuIcon.cs" />

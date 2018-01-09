@@ -86,13 +86,15 @@ namespace percentage
             if (position <= 1)
                 delay = 1; // without delay (minimum allowed timer interval)
             else if (position == 2)
-                delay = 3 * minimumDelay;
+                delay = 4 * minimumDelay;
             else if (position == 3)
-                delay = 2 * minimumDelay;
+                delay = 3 * minimumDelay;
             else if (position == 4)
+                delay = 2 * minimumDelay;
+            else if (position == 5)
                 delay = 1 * minimumDelay;
             else
-                delay = 2 * minimumDelay; // too large number, mess it with last icon
+                delay = 1 * minimumDelay; // too large number, mess it with last icon
             Timer timer = new Timer();
             timer.Interval = delay;
             timer.Tick += DelayedIconStart;
@@ -102,6 +104,7 @@ namespace percentage
         private void DelayedIconStart(object sender, EventArgs e)
         {
             ((Timer)sender).Stop();
+            // show icon
             UpdateIcon(sender, e);
             // and start updating
             updateTimer.Start();

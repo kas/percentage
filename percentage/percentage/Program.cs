@@ -18,6 +18,7 @@ namespace percentage
             TrayIcon trayIcon2 = new NetworkIcon();
             TrayIcon trayIcon3 = new RamIcon();
             TrayIcon trayIcon4 = new CpuIcon();
+            TrayIcon trayIcon5 = new DiskIcon();
 
             Application.Run();
         }
