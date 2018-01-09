@@ -63,7 +63,15 @@ namespace percentage
             float totalBytes = 0;
             foreach (var counter in counters)
             {
-                totalBytes += counter.NextValue();
+                try
+                {
+                    totalBytes += counter.NextValue();
+                }
+                catch (System.InvalidOperationException)
+                {
+                    // ignore disappeared network interfaces
+                }
+                
             }
             return totalBytes;
         }
