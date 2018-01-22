@@ -9,15 +9,12 @@ namespace percentage
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern bool DestroyIcon(IntPtr handle);
-
         private const string iconFont = "Segoe UI";
         private const int iconFontSize = 14;
-
         private string batteryPercentage;
         private NotifyIcon notifyIcon;
 
         private int refreshInterval = 1000; // in miliseconds
-
 
         public TrayIcon()
         {
@@ -33,11 +30,8 @@ namespace percentage
             menuItem.Index = 0;
             menuItem.Text = "Exit";
             menuItem.Click += new System.EventHandler(menuItem_Click);
-
             notifyIcon.ContextMenu = contextMenu;
-
             batteryPercentage = "?";
-
             notifyIcon.Visible = true;
 
             Timer timer = new Timer();
@@ -51,26 +45,24 @@ namespace percentage
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
             
-
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black)))
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Transparent)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
                 {
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
+                        // Offline means the laptop is not connected to a power source
                         if (powerStatus.PowerLineStatus.ToString().Equals("Offline")) {
-                            int hoursRemaining = (int)Math.Floor(powerStatus.BatteryLifeRemaining / 3600.0);
-                            int minutesRemaining = (int)Math.Floor((((powerStatus.BatteryLifeRemaining / 3600.0) - hoursRemaining) * 60));
-                            
                             notifyIcon.Icon = icon;
-                            notifyIcon.Text = hoursRemaining + ":" + minutesRemaining;
-                    } else
-                        {
+                            var ts = TimeSpan.FromSeconds(powerStatus.BatteryLifeRemaining);
+                            
+                            // if you don't want the leading zeros, you can replace the format by '{0}:{1}'
+                            notifyIcon.Text = string.Format("{0:00}:{1:00}", ts.Hours, ts.Minutes);
+                        } else {
                             notifyIcon.Icon = icon;
                             notifyIcon.Text = "Charging";
                         }
-
                     }
                 }
                 finally
