@@ -1,9 +1,0 @@
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\bin\Debug\percentage.exe.config
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\bin\Debug\percentage.exe
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\bin\Debug\percentage.pdb
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.csprojResolveAssemblyReference.cache
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.Properties.Resources.resources
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.csproj.GenerateResource.Cache
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.exe
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.pdb
-C:\Users\Lucas\OneDrive\percentage-master\percentage\percentage\obj\Debug\percentage.csproj.CoreCompileInputs.cache
