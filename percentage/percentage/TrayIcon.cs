@@ -16,6 +16,9 @@ namespace percentage
         private string batteryPercentage;
         private NotifyIcon notifyIcon;
 
+        private int refreshInterval = 1000; // in miliseconds
+
+
         public TrayIcon()
         {
             ContextMenu contextMenu = new ContextMenu();
@@ -28,7 +31,7 @@ namespace percentage
 
             // initialize menuItem
             menuItem.Index = 0;
-            menuItem.Text = "E&xit";
+            menuItem.Text = "Exit";
             menuItem.Click += new System.EventHandler(menuItem_Click);
 
             notifyIcon.ContextMenu = contextMenu;
@@ -39,7 +42,7 @@ namespace percentage
 
             Timer timer = new Timer();
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = 1000; // in miliseconds
+            timer.Interval = refreshInterval; 
             timer.Start();
         }
 
@@ -47,6 +50,7 @@ namespace percentage
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
+            
 
             using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black)))
             {
@@ -55,8 +59,18 @@ namespace percentage
                 {
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
-                        notifyIcon.Icon = icon;
-                        notifyIcon.Text = batteryPercentage + "%";
+                        if (powerStatus.PowerLineStatus.ToString().Equals("Offline")) {
+                            int hoursRemaining = (int)Math.Floor(powerStatus.BatteryLifeRemaining / 3600.0);
+                            int minutesRemaining = (int)Math.Floor((((powerStatus.BatteryLifeRemaining / 3600.0) - hoursRemaining) * 60));
+                            
+                            notifyIcon.Icon = icon;
+                            notifyIcon.Text = hoursRemaining + ":" + minutesRemaining;
+                    } else
+                        {
+                            notifyIcon.Icon = icon;
+                            notifyIcon.Text = "Charging";
+                        }
+
                     }
                 }
                 finally
