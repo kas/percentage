@@ -47,8 +47,15 @@ namespace percentage
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
+            BatteryChargeStatus batteryChargeStatus = SystemInformation.PowerStatus.BatteryChargeStatus;
 
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Black)))
+            Color fontColor;
+            if (batteryChargeStatus.HasFlag(BatteryChargeStatus.Charging))
+                fontColor = Color.FromArgb(255, 0, 255, 0);
+            else
+                fontColor = Color.FromArgb(255, 255, 255, 255);
+
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), fontColor, Color.FromArgb(0, 0, 0, 0))))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
@@ -85,7 +92,7 @@ namespace percentage
                 // create a brush for the text
                 using (Brush textBrush = new SolidBrush(textColor))
                 {
-                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
                     graphics.DrawString(text, font, textBrush, 0, 0);
                     graphics.Save();
                 }
