@@ -47,10 +47,10 @@ namespace percentage
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
-            BatteryChargeStatus batteryChargeStatus = SystemInformation.PowerStatus.BatteryChargeStatus;
+            bool charging = SystemInformation.PowerStatus.BatteryChargeStatus.HasFlag(BatteryChargeStatus.Charging);
 
             Color fontColor;
-            if (batteryChargeStatus.HasFlag(BatteryChargeStatus.Charging))
+            if (charging)
                 fontColor = Color.FromArgb(255, 0, 255, 0);
             else
                 fontColor = Color.FromArgb(255, 255, 255, 255);
@@ -62,8 +62,16 @@ namespace percentage
                 {
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
-                        notifyIcon.Icon = icon;
+                        notifyIcon.Icon = icon;             
                         notifyIcon.Text = batteryPercentage + "%";
+                        if (!charging)
+                        {
+                            int seconds = SystemInformation.PowerStatus.BatteryLifeRemaining;
+                            int mins = seconds / 60;
+                            int hours = mins / 60;
+                            mins = mins % 60;
+                            notifyIcon.Text += "\n" +  " " + hours + ":" + mins + " remaining";
+                        }
                     }
                 }
                 finally
