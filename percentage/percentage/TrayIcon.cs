@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Management;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -51,9 +53,14 @@ namespace percentage
 
             Color fontColor;
             if (charging)
+            {
                 fontColor = Color.FromArgb(255, 0, 255, 0);
+            }
             else
+            {
                 fontColor = Color.FromArgb(255, 255, 255, 255);
+
+            }
 
             using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), fontColor, Color.FromArgb(0, 0, 0, 0))))
             {
@@ -71,6 +78,10 @@ namespace percentage
                             int hours = mins / 60;
                             mins = mins % 60;
                             notifyIcon.Text += "\n" +  " " + hours + ":" + mins + " remaining";
+                        }
+                        else
+                        {
+                            notifyIcon.Text = "Charging";
                         }
                     }
                 }
