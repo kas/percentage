@@ -15,19 +15,24 @@ namespace percentage
 
         private string batteryPercentage;
         private NotifyIcon notifyIcon;
+        private MenuItem descriptionMenuItem;
 
         public TrayIcon()
         {
             ContextMenu contextMenu = new ContextMenu();
             MenuItem menuItem = new MenuItem();
+            descriptionMenuItem = new MenuItem();
 
             notifyIcon = new NotifyIcon();
 
             // initialize contextMenu
-            contextMenu.MenuItems.AddRange(new MenuItem[] { menuItem });
+            contextMenu.MenuItems.AddRange(new MenuItem[] { descriptionMenuItem, menuItem });
+
+            // initialize descriptionMenuItem
+            descriptionMenuItem.Text = "";
+            descriptionMenuItem.Enabled = false;
 
             // initialize menuItem
-            menuItem.Index = 0;
             menuItem.Text = "E&xit";
             menuItem.Click += new System.EventHandler(menuItem_Click);
 
@@ -113,6 +118,8 @@ namespace percentage
                         }
                         notifyIcon.Icon = icon;
                         notifyIcon.Text = description;
+
+                        descriptionMenuItem.Text = description;
                     }
                 }
                 finally
