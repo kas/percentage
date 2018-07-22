@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamIcon", "RamIcon\RamIcon.csproj", "{7A56D729-2E38-4145-9604-61EAD7AEBC62}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TrayIconLibrary", "TrayIconLibrary\TrayIconLibrary.shproj", "{B02E742A-7A87-48C4-8998-1A2DBE241F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpuIcon", "CpuIcon\CpuIcon.csproj", "{171D5C6F-5B40-4129-ACF7-06FA8CBA26B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskIcon", "DiskIcon\DiskIcon.csproj", "{AFAF7F78-96AD-43A4-A0A8-ECBD58E50CF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIcon", "NetIcon\NetIcon.csproj", "{C3150D6B-5B59-4AC5-92F4-2D7067CD029E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryIcon", "BatteryIcon\BatteryIcon.csproj", "{BD8D15D7-0311-40C4-B465-44FB0EA6DFBC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TrayIconLibrary\TrayIconLibrary.projitems*{171d5c6f-5b40-4129-acf7-06fa8cba26b8}*SharedItemsImports = 4
+		TrayIconLibrary\TrayIconLibrary.projitems*{7a56d729-2e38-4145-9604-61ead7aebc62}*SharedItemsImports = 4
+		TrayIconLibrary\TrayIconLibrary.projitems*{afaf7f78-96ad-43a4-a0a8-ecbd58e50cf4}*SharedItemsImports = 4
+		TrayIconLibrary\TrayIconLibrary.projitems*{b02e742a-7a87-48c4-8998-1a2dbe241f13}*SharedItemsImports = 13
+		TrayIconLibrary\TrayIconLibrary.projitems*{bd8d15d7-0311-40c4-b465-44fb0ea6dfbc}*SharedItemsImports = 4
+		TrayIconLibrary\TrayIconLibrary.projitems*{c3150d6b-5b59-4ac5-92f4-2d7067cd029e}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A56D729-2E38-4145-9604-61EAD7AEBC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A56D729-2E38-4145-9604-61EAD7AEBC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A56D729-2E38-4145-9604-61EAD7AEBC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A56D729-2E38-4145-9604-61EAD7AEBC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171D5C6F-5B40-4129-ACF7-06FA8CBA26B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171D5C6F-5B40-4129-ACF7-06FA8CBA26B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171D5C6F-5B40-4129-ACF7-06FA8CBA26B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171D5C6F-5B40-4129-ACF7-06FA8CBA26B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAF7F78-96AD-43A4-A0A8-ECBD58E50CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAF7F78-96AD-43A4-A0A8-ECBD58E50CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAF7F78-96AD-43A4-A0A8-ECBD58E50CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAF7F78-96AD-43A4-A0A8-ECBD58E50CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3150D6B-5B59-4AC5-92F4-2D7067CD029E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3150D6B-5B59-4AC5-92F4-2D7067CD029E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3150D6B-5B59-4AC5-92F4-2D7067CD029E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3150D6B-5B59-4AC5-92F4-2D7067CD029E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8D15D7-0311-40C4-B465-44FB0EA6DFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8D15D7-0311-40C4-B465-44FB0EA6DFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8D15D7-0311-40C4-B465-44FB0EA6DFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8D15D7-0311-40C4-B465-44FB0EA6DFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCD81DA6-AEC0-4BE3-BE35-7E67656BF6B8}
+	EndGlobalSection
+EndGlobal
