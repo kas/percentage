@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Management;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -36,7 +38,7 @@ namespace percentage
 
             Timer timer = new Timer();
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = refreshInterval; 
+            timer.Interval = refreshInterval;
             timer.Start();
         }
 
@@ -44,23 +46,38 @@ namespace percentage
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
-            
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), Color.White, Color.Transparent)))
+            bool charging = SystemInformation.PowerStatus.BatteryChargeStatus.HasFlag(BatteryChargeStatus.Charging);
+
+            Color fontColor;
+            if (charging)
+            {
+                fontColor = Color.FromArgb(255, 0, 255, 0);
+            }
+            else
+            {
+                fontColor = Color.FromArgb(255, 255, 255, 255);
+
+            }
+
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), fontColor, Color.FromArgb(0, 0, 0, 0))))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
                 {
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
-                        // Offline means the laptop is not connected to a power source
-                        if (powerStatus.PowerLineStatus.ToString().Equals("Offline")) {
-                            notifyIcon.Icon = icon;
-                            var ts = TimeSpan.FromSeconds(powerStatus.BatteryLifeRemaining);
-                            
-                            // if you don't want the leading zeros, you can replace the format by '{0}:{1}'
-                            notifyIcon.Text = string.Format("{0:00}:{1:00}", ts.Hours, ts.Minutes);
-                        } else {
-                            notifyIcon.Icon = icon;
+                        notifyIcon.Icon = icon;
+                        notifyIcon.Text = batteryPercentage + "%";
+                        if (!charging)
+                        {
+                            int seconds = SystemInformation.PowerStatus.BatteryLifeRemaining;
+                            int mins = seconds / 60;
+                            int hours = mins / 60;
+                            mins = mins % 60;
+                            notifyIcon.Text += "\n" +  " " + hours + ":" + mins + " remaining";
+                        }
+                        else
+                        {
                             notifyIcon.Text = "Charging";
                         }
                     }
@@ -91,7 +108,7 @@ namespace percentage
                 // create a brush for the text
                 using (Brush textBrush = new SolidBrush(textColor))
                 {
-                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                    graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
                     graphics.DrawString(text, font, textBrush, 0, 0);
                     graphics.Save();
                 }
