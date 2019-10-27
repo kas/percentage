@@ -9,13 +9,20 @@ See your battery percentage in the Windows 10 system tray
 
 ## Installing
 
-* [Download the latest release](https://github.com/kas/percentage/releases)
-* Put `percentage.exe` in your startup folder
-  * To get to your startup folder, press `Windows+R`, type `shell:startup`, and press enter
+-   [Download the latest release](https://github.com/kas/percentage/releases)
+-   Put `percentage.exe` in your startup folder (to get to your startup folder,
+    press `Windows+R`, type `shell:startup`, and press enter)
 
 ## Compiling
 
-This project was compiled with Visual Studio Professional 2015.
+This project was compiled with Visual Studio Professional 2015. To compile
+using a Docker image with this pre-installed, first install Docker Desktop and
+configure it to run Windows containers, then change to the root directory of
+the repository and run the following:
+
+```powershell
+docker run -v "$(pwd)\:C:\Build\" nugardt/msbuild:15.5 msbuild C:\Build\percentage\percentage.sln /property:Configuration=Release
+```
 
 ## Contributing
 
