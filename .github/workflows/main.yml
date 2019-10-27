@@ -14,4 +14,4 @@ jobs:
 
     - name: MSBuild
       working-directory: percentage
-      run: msbuild percentage.csproj
+      run: msbuild percentage.sln
