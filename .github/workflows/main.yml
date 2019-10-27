@@ -13,5 +13,5 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
 
     - name: MSBuild
-      working-directory: src
-      run: msbuild percentage\percentage.csproj
+      working-directory: percentage
+      run: msbuild percentage.csproj
