@@ -5,13 +5,19 @@ on: [push]
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
+      - name: Setup MSBuild.exe
+        uses: warrenbuckley/Setup-MSBuild@v1
 
-    - name: MSBuild
-      working-directory: percentage
-      run: msbuild percentage.sln
+      - name: MSBuild
+        working-directory: percentage
+        run: msbuild percentage.sln /property:Configuration=Release
+
+      - name: Artifact upload
+        uses: actions/upload-artifact@master
+        with:
+          name: percentage
+          path: percentage\percentage\bin\Release\percentage.exe
