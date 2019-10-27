@@ -15,7 +15,6 @@ namespace percentage
         private const int iconFontSize = 14;
         private string batteryPercentage;
         private NotifyIcon notifyIcon;
-        private MenuItem descriptionMenuItem;
 
         private int refreshInterval = 1000; // in miliseconds
 
@@ -23,19 +22,15 @@ namespace percentage
         {
             ContextMenu contextMenu = new ContextMenu();
             MenuItem menuItem = new MenuItem();
-            descriptionMenuItem = new MenuItem();
 
             notifyIcon = new NotifyIcon();
 
             // initialize contextMenu
-            contextMenu.MenuItems.AddRange(new MenuItem[] { descriptionMenuItem, menuItem });
-
-            // initialize descriptionMenuItem
-            descriptionMenuItem.Text = "";
-            descriptionMenuItem.Enabled = false;
+            contextMenu.MenuItems.AddRange(new MenuItem[] { menuItem });
 
             // initialize menuItem
-            menuItem.Text = "E&xit";
+            menuItem.Index = 0;
+            menuItem.Text = "Exit";
             menuItem.Click += new System.EventHandler(menuItem_Click);
             notifyIcon.ContextMenu = contextMenu;
             batteryPercentage = "?";
@@ -50,16 +45,6 @@ namespace percentage
         private void timer_Tick(object sender, EventArgs e)
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
-            bool fullyCharged = (powerStatus.BatteryLifePercent == 1.0);
-
-            BatteryChargeStatus chargeStatus = SystemInformation.PowerStatus.BatteryChargeStatus;
-            bool charging = chargeStatus.HasFlag(BatteryChargeStatus.Charging);
-            bool critical = chargeStatus.HasFlag(BatteryChargeStatus.Critical);
-            bool noBattery = chargeStatus.HasFlag(BatteryChargeStatus.NoSystemBattery);
-
-            PowerLineStatus powerLineStatus = SystemInformation.PowerStatus.PowerLineStatus;
-            bool pluggedIn = (powerLineStatus == PowerLineStatus.Online);
-
             batteryPercentage = (powerStatus.BatteryLifePercent * 100).ToString();
             bool charging = SystemInformation.PowerStatus.BatteryChargeStatus.HasFlag(BatteryChargeStatus.Charging);
 
@@ -74,63 +59,27 @@ namespace percentage
 
             }
 
-            Color fontColor = Color.White;
-            if (!noBattery)
-            {
-                if (charging || (pluggedIn && fullyCharged))
-                {
-                    fontColor = Color.Lime;
-                }
-                else if (critical)
-                {
-                    fontColor = Color.Red;
-                }
-            }
-
-            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), fontColor, Color.Black)))
+            using (Bitmap bitmap = new Bitmap(DrawText(batteryPercentage, new Font(iconFont, iconFontSize), fontColor, Color.FromArgb(0, 0, 0, 0))))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
                 {
                     using (Icon icon = Icon.FromHandle(intPtr))
                     {
-                        string description = "";
-                        if (noBattery)
+                        notifyIcon.Icon = icon;
+                        notifyIcon.Text = batteryPercentage + "%";
+                        if (!charging)
                         {
-                            description = "No Battery Detected";
-                        }
-                        else if (pluggedIn)
-                        {
-                            if (charging)
-                            {
-                                description = string.Format("Charging ({0}%)", batteryPercentage);
-                            }
-                            else if (fullyCharged)
-                            {
-                                description = string.Format("Fully Charged ({0}%)", batteryPercentage);
-                            }
-                            else
-                            {
-                                description = string.Format("Not Charging ({0}%)", batteryPercentage);
-                            }
+                            int seconds = SystemInformation.PowerStatus.BatteryLifeRemaining;
+                            int mins = seconds / 60;
+                            int hours = mins / 60;
+                            mins = mins % 60;
+                            notifyIcon.Text += "\n" +  " " + hours + ":" + mins + " remaining";
                         }
                         else
                         {
-                            int totalRemaining = SystemInformation.PowerStatus.BatteryLifeRemaining;
-                            if (totalRemaining > 0)
-                            {
-                                TimeSpan timeSpan = TimeSpan.FromSeconds(totalRemaining);
-                                description = string.Format("{1} hr {2:D2} min ({0}%) remaining", batteryPercentage, timeSpan.Hours, timeSpan.Minutes);
-                            }
-                            else
-                            {
-                                description = string.Format("{0}% remaining", batteryPercentage);
-                            }
+                            notifyIcon.Text = "Charging";
                         }
-                        notifyIcon.Icon = icon;
-                        notifyIcon.Text = description;
-
-                        descriptionMenuItem.Text = description;
                     }
                 }
                 finally
