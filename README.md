@@ -1,3 +1,5 @@
+![CI](https://github.com/thumperward/percentage/workflows/CI/badge.svg)
+
 # percentage
 
 ## Original project by kas
