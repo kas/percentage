@@ -12,8 +12,6 @@ See your battery percentage in the Windows 10 system tray
 
 ## Compiling
 
-This project was compiled with Visual Studio Professional 2015.
+This project was compiled with Visual Studio Community 2019.
 
-## Contributing
-
-I created this project with a very basic understanding of developing C# desktop applications and contributions are extremely welcome!
+Select ".NET desktop development" when setting up Visual Studio.
