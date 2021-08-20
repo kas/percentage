@@ -3,19 +3,16 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  windows-build:
     runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
-
       - name: Setup MSBuild.exe
-        uses: warrenbuckley/Setup-MSBuild@v1
-
+        uses: microsoft/setup-msbuild@v1.0.2
       - name: MSBuild
         working-directory: percentage
         run: msbuild percentage.sln /property:Configuration=Release
-
       - name: Artifact upload
         uses: actions/upload-artifact@master
         with:
