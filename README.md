@@ -1,14 +1,16 @@
 # percentage
 
-![](https://raw.githubusercontent.com/kas/percentage/master/percentage.png)
+![CI](https://github.com/kas/percentage/workflows/CI/badge.svg)
 
-See your battery percentage in the Windows 10 system tray
+![Screenshot](percentage.png)
+
+See your battery percentage in the Windows 10 system tray.
 
 ## Installing
 
-1. [Download the latest release](https://github.com/kas/percentage/releases)
-1. Put percentage.exe in your startup folder
-   1. To get to your startup folder, press Windows+R, type "shell:startup", then press enter
+-   [Download the latest release](https://github.com/kas/percentage/releases).
+-   Put `percentage.exe` in your startup folder (to get to your startup folder,
+    press `Windows + R`, type `shell:startup`, and press enter).
 
 ## Compiling
 
@@ -16,11 +18,24 @@ This project was compiled with Visual Studio Community 2019.
 
 Select ".NET desktop development" when setting up Visual Studio.
 
-To build the project
-1. Open the percentage/percentage.sln file with Visual Studio
-1. Click "Build > Build Solution"
-1. percentage.exe can be found at percentage\percentage\percentage\bin\Debug\percentage.exe
+To compile using a Windows Docker image with this pre-installed, first install 
+Docker Desktop and configure it to run Windows containers, then change to the 
+root directory of the repository and run the following:
+
+```powershell
+docker run -v "$(pwd)\:C:\Build\" nugardt/msbuild:15.5 msbuild \
+  C:\Build\percentage\percentage.sln /property:Configuration=Release
+```
+
+Alternatively, simply open the project in the provided devcontainer and run:
+
+```sh
+msbuild percentage/percentage.sln -p:Configuration=Release
+```
+
+The output binary is in `percentage/percentage/bin/release`.
 
 ## Contributions
 
-My goal for this project is to keep it as simple as possible. I welcome suggestions, but for complicated features I'd recommend forking the project.
+My goal for this project is to keep it as simple as possible. I welcome 
+suggestions, but for complicated features I'd recommend forking the project.
