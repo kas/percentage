@@ -1,0 +1,11 @@
+{
+	"name": "Mono (.NET)",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"extensions": [
+		"ms-dotnettools.csharp",
+		"redhat.vscode-yaml"
+	],
+	"remoteUser": "vscode"
+}

@@ -1,0 +1,37 @@
+name: CI
+
+on: [push]
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: MSBuild
+        working-directory: percentage
+        run: msbuild percentage.sln /property:Configuration=Release
+      # - name: Artifact upload
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: percentage
+      #     path: percentage\percentage\bin\Release\percentage.exe
+  linux-build:
+    runs-on: ubuntu-latest
+    container:
+      image: mono
+    steps:
+      - name: Prerequisites
+        run: apt update && apt install -y --no-install-recommends ssh git
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: MSBuild
+        working-directory: percentage
+        run: msbuild percentage.sln -p:Configuration=Release
+      # - name: Artifact upload
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: percentage
+      #     path: percentage\percentage\bin\Release\percentage.exe
