@@ -1,40 +1,26 @@
 # percentage
 
-![CI](https://github.com/thumperward/percentage/workflows/CI/badge.svg)
+![](https://raw.githubusercontent.com/kas/percentage/master/percentage.png)
 
-![Screenshot](percentage.png)
-
-See your battery percentage in the Windows 10 system tray.
-
-Original project by [kas](https://github.com/kas/percentage).
+See your battery percentage in the Windows 10 system tray
 
 ## Installing
 
--   [Download the latest release](https://github.com/thumperward/percentage/releases).
--   Put `percentage.exe` in your startup folder (to get to your startup folder,
-    press `Windows + R`, type `shell:startup`, and press enter).
+1. [Download the latest release](https://github.com/kas/percentage/releases)
+1. Put percentage.exe in your startup folder
+   1. To get to your startup folder, press Windows+R, type "shell:startup", then press enter
 
 ## Compiling
 
-This project was compiled with Visual Studio Professional 2015.
+This project was compiled with Visual Studio Community 2019.
 
-To compile using a Windows Docker image with this pre-installed, first install 
-Docker Desktop and configure it to run Windows containers, then change to the 
-root directory of the repository and run the following:
+Select ".NET desktop development" when setting up Visual Studio.
 
-```powershell
-docker run -v "$(pwd)\:C:\Build\" nugardt/msbuild:15.5 msbuild C:\Build\percentage\percentage.sln /property:Configuration=Release
-```
+To build the project
+1. Open the percentage/percentage.sln file with Visual Studio
+1. Click "Build > Build Solution"
+1. percentage.exe can be found at percentage\percentage\percentage\bin\Debug\percentage.exe
 
-Alternatively, simply open the project in the provided devcontainer and run:
+## Contributions
 
-```sh
-msbuild percentage/percentage.sln -p:Configuration=Release
-```
-
-The output binary is in `percentage/percentage/bin/release`.
-
-## Contributing
-
-I created this project with a very basic understanding of developing C# desktop
-applications and contributions are extremely welcome!
+My goal for this project is to keep it as simple as possible. I welcome suggestions, but for complicated features I'd recommend forking the project.
