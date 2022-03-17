@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/kas/percentage/master/percentage.png)
 
-See your battery percentage in the Windows 10 system tray
+See your battery percentage in the Windows 10 and Windows 11 system tray
 
 ## Installing
 
@@ -12,7 +12,7 @@ See your battery percentage in the Windows 10 system tray
 
 ## Compiling
 
-This project was compiled with Visual Studio Community 2019.
+This project was compiled with Visual Studio Community 2022.
 
 Select ".NET desktop development" when setting up Visual Studio.
 
