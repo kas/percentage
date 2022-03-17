@@ -12,6 +12,7 @@ namespace percentage
 
         private const int fontSize = 18;
         private const string font = "Segoe UI";
+        private Color fontColor = Color.Black;
 
         private NotifyIcon notifyIcon;
 
@@ -54,6 +55,23 @@ namespace percentage
             return bitmap;
         }
 
+        // true为深色模式 反之false
+        private static bool GetWindowsTheme()
+        {
+            const string RegistryKeyPath = @"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize";
+            // 获取应用的颜色模式
+            //const string RegistryValueName = "AppsUseLightTheme";
+            // 获取系统的颜色模式
+            const string RegistryValueName = "SystemUsesLightTheme";
+            // 这里也可能是LocalMachine(HKEY_LOCAL_MACHINE)
+            // see "https://www.addictivetips.com/windows-tips/how-to-enable-the-dark-theme-in-windows-10/"
+            object registryValueObject = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(RegistryKeyPath)?.GetValue(RegistryValueName);
+            if (registryValueObject is null)
+                return false;
+
+            return (int)registryValueObject > 0 ? false : true;
+        }
+
         private static SizeF GetStringImageSize(string text, Font font)
         {
             using (Image image = new Bitmap(1, 1))
@@ -72,9 +90,25 @@ namespace percentage
         {
             PowerStatus powerStatus = SystemInformation.PowerStatus;
             String percentage = (powerStatus.BatteryLifePercent * 100).ToString();
-            bool isCharging = SystemInformation.PowerStatus.PowerLineStatus == PowerLineStatus.Online;
-            String bitmapText = isCharging ? percentage + "*" : percentage;
-            using (Bitmap bitmap = new Bitmap(GetTextBitmap(bitmapText, new Font(font, fontSize), Color.White)))
+            bool isCharging = powerStatus.PowerLineStatus == PowerLineStatus.Online;
+            String bitmapText = powerStatus.BatteryLifePercent < 1 ? ((int)(powerStatus.BatteryLifePercent * 100)).ToString("D2") : "00";
+
+            if (GetWindowsTheme())
+            {
+                if (fontColor != Color.White)
+                {
+                    fontColor = Color.White;
+                }
+            }
+            else
+            {
+                if (fontColor != Color.Black)
+                {
+                    fontColor = Color.Black;
+                }
+            }
+
+            using (Bitmap bitmap = new Bitmap(GetTextBitmap(bitmapText, new Font(font, fontSize), fontColor)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
