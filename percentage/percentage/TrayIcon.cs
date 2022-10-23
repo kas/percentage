@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace percentage
 {
@@ -74,7 +75,18 @@ namespace percentage
             String percentage = (powerStatus.BatteryLifePercent * 100).ToString();
             bool isCharging = SystemInformation.PowerStatus.PowerLineStatus == PowerLineStatus.Online;
             String bitmapText = isCharging ? percentage + "*" : percentage;
-            using (Bitmap bitmap = new Bitmap(GetTextBitmap(bitmapText, new Font(font, fontSize), Color.White)))
+            Color bitmapColor;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize");
+            if (key != null)
+            {
+                bitmapColor = (int)key.GetValue("SystemUsesLightTheme") == 0 ? Color.White : Color.Black;
+                key.Close();
+            }
+            else
+            {
+                bitmapColor = Color.White;
+            }
+            using (Bitmap bitmap = new Bitmap(GetTextBitmap(bitmapText, new Font(font, fontSize), bitmapColor)))
             {
                 System.IntPtr intPtr = bitmap.GetHicon();
                 try
