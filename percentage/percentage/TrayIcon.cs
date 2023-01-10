@@ -11,7 +11,7 @@ namespace percentage
         static extern bool DestroyIcon(IntPtr handle);
 
         private const int fontSize = 20;
-        private const string font = "Segoe UI Semibold";
+        private const string font = "Franklin Gothic Medium Cond";
 
         private NotifyIcon notifyIcon;
 
